@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.utils
+package dev.CP3405B1.expensetracker.utils
 
 object Constants {
 

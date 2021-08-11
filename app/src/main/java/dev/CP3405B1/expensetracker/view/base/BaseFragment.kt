@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.view.base
+package dev.CP3405B1expensetracker.view.base
 
 import android.content.Context
 import android.os.Bundle

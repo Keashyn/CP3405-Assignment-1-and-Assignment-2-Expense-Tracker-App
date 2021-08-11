@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.view.dashboard
+package dev.CP3405B1.expensetracker.view.dashboard
 
 import android.os.Bundle
 import android.view.*
@@ -16,15 +16,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetracker.R
-import dev.spikeysanju.expensetracker.databinding.FragmentDashboardBinding
-import dev.spikeysanju.expensetracker.model.Transaction
-import dev.spikeysanju.expensetracker.utils.viewState.ViewState
-import dev.spikeysanju.expensetracker.view.adapter.TransactionAdapter
-import dev.spikeysanju.expensetracker.view.base.BaseFragment
-import dev.spikeysanju.expensetracker.view.main.viewmodel.TransactionViewModel
+import dev.CP3405B1.expensetracker.R
+import dev.CP3405B1.expensetracker.databinding.FragmentDashboardBinding
+import dev.CP3405B1.expensetracker.model.Transaction
+import dev.CP3405B1.expensetracker.utils.viewState.ViewState
+import dev.CP3405B1.expensetracker.view.adapter.TransactionAdapter
+import dev.CP3405B1.expensetracker.view.base.BaseFragment
+import dev.CP3405B1.expensetracker.view.main.viewmodel.TransactionViewModel
 import hide
-import indianRupee
+import SingaporeDollar
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
 import show
@@ -141,9 +141,9 @@ class DashboardFragment :
         val (totalIncome, totalExpense) = transaction.partition { it.transactionType == "Income" }
         val income = totalIncome.sumByDouble { it.amount }
         val expense = totalExpense.sumByDouble { it.amount }
-        incomeCardView.total.text = "+ ".plus(indianRupee(income))
-        expenseCardView.total.text = "- ".plus(indianRupee(expense))
-        totalBalanceView.totalBalance.text = indianRupee(income - expense)
+        incomeCardView.total.text = "+ ".plus(SingaporeDollar(income))
+        expenseCardView.total.text = "- ".plus(SingaporeDollar(expense))
+        totalBalanceView.totalBalance.text = SingaporeDollar(income - expense)
     }
 
     private fun observeTransaction() = lifecycleScope.launchWhenStarted {

@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker
+package dev.CP3405B1.expensetracker
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.view.edit
+package dev.CP3405B1.expensetracker.view.edit
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,12 +9,12 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetracker.R
-import dev.spikeysanju.expensetracker.databinding.FragmentEditTransactionBinding
-import dev.spikeysanju.expensetracker.model.Transaction
-import dev.spikeysanju.expensetracker.utils.Constants
-import dev.spikeysanju.expensetracker.view.base.BaseFragment
-import dev.spikeysanju.expensetracker.view.main.viewmodel.TransactionViewModel
+import dev.CP3405B1.expensetracker.R
+import dev.CP3405B1.expensetracker.databinding.FragmentEditTransactionBinding
+import dev.CP3405B1.expensetracker.model.Transaction
+import dev.CP3405B1.expensetracker.utils.Constants
+import dev.CP3405B1.expensetracker.view.base.BaseFragment
+import dev.CP3405B1.expensetracker.view.main.viewmodel.TransactionViewModel
 import parseDouble
 import transformIntoDatePicker
 import java.util.*

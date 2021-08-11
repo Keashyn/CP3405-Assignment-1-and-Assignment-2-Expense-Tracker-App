@@ -12,7 +12,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "dev.spikeysanju.expensetracker"
+        applicationId "dev.CP3405B1.expensetracker"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

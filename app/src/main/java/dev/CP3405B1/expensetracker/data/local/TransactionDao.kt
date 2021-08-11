@@ -1,7 +1,7 @@
-package dev.spikeysanju.expensetracker.data.local
+package dev.CP3405B1.expensetracker.data.local
 
 import androidx.room.*
-import dev.spikeysanju.expensetracker.model.Transaction
+import dev.CP3405B1.expensetracker.model.Transaction
 import kotlinx.coroutines.flow.Flow
 
 @Dao

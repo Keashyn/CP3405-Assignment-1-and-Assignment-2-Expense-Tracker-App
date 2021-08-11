@@ -1,7 +1,7 @@
-package dev.spikeysanju.expensetracker.repo
+package dev.CP3405B1.expensetracker.repo
 
-import dev.spikeysanju.expensetracker.data.local.AppDatabase
-import dev.spikeysanju.expensetracker.model.Transaction
+import dev.CP3405B1.expensetracker.data.local.AppDatabase
+import dev.CP3405B1.expensetracker.model.Transaction
 import javax.inject.Inject
 
 class TransactionRepo @Inject constructor(private val db: AppDatabase) {

@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.view.dialog
+package dev.Cp3405B1.expensetracker.view.dialog
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import dev.spikeysanju.expensetracker.databinding.ErrorDialogLayoutBinding
+import dev.CP3405B1.expensetracker.databinding.ErrorDialogLayoutBinding
 
 class ErrorDialog : BottomSheetDialogFragment() {
     private var _binding: ErrorDialogLayoutBinding? = null

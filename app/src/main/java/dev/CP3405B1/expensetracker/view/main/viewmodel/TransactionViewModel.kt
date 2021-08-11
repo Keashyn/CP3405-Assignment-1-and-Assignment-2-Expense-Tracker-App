@@ -1,15 +1,15 @@
-package dev.spikeysanju.expensetracker.view.main.viewmodel
+package dev.CP3405B1.expensetracker.view.main.viewmodel
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dev.spikeysanju.expensetracker.data.local.datastore.UIModeDataStore
-import dev.spikeysanju.expensetracker.model.Transaction
-import dev.spikeysanju.expensetracker.repo.TransactionRepo
-import dev.spikeysanju.expensetracker.utils.viewState.DetailState
-import dev.spikeysanju.expensetracker.utils.viewState.ViewState
+import dev.CP3405B1.expensetracker.data.local.datastore.UIModeDataStore
+import dev.CP3405B1.expensetracker.model.Transaction
+import dev.CP3405B1.expensetracker.repo.TransactionRepo
+import dev.CP3405B1.expensetracker.utils.viewState.DetailState
+import dev.CP3405B1.expensetracker.utils.viewState.ViewState
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

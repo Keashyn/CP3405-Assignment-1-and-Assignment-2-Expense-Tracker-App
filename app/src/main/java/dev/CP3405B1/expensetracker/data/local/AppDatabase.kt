@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import dev.spikeysanju.expensetracker.model.Transaction
+import dev.CP3405B1.expensetracker.model.Transaction
 
 @Database(
     entities = [Transaction::class],

@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.view.adapter
+package dev.CP3405B1.expensetracker.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,9 +6,9 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import dev.spikeysanju.expensetracker.R
-import dev.spikeysanju.expensetracker.databinding.ItemTransactionLayoutBinding
-import dev.spikeysanju.expensetracker.model.Transaction
+import dev.CP3405B1.expensetracker.R
+import dev.CP3405B1.expensetracker.databinding.ItemTransactionLayoutBinding
+import dev.CP3405B1.expensetracker.model.Transaction
 import indianRupee
 
 class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.TransactionVH>() {

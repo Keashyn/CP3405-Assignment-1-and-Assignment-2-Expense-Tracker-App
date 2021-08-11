@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.model
+package dev.CP3405B1.expensetracker.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

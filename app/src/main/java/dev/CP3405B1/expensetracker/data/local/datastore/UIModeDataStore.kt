@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.data.local.datastore
+package dev.CP3405B1.expensetracker.data.local.datastore
 
 import android.content.Context
 import androidx.datastore.core.DataStore

@@ -48,11 +48,11 @@ fun TextInputEditText.transformIntoDatePicker(
     }
 }
 
-// indian rupee converter
-fun indianRupee(amount: Double): String {
+// Singapore Dollar converter
+fun SingaporeDollar(amount: Double): String {
     val format: NumberFormat = NumberFormat.getCurrencyInstance()
     format.maximumFractionDigits = 0
-    format.currency = Currency.getInstance("INR")
+    format.currency = Currency.getInstance("SGD")
     return format.format(amount)
 }
 

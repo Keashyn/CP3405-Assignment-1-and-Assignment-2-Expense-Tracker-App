@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.view.main
+package dev.CP3405B1.expensetracker.view.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -8,12 +8,12 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetracker.R
-import dev.spikeysanju.expensetracker.data.local.AppDatabase
-import dev.spikeysanju.expensetracker.databinding.ActivityMainBinding
-import dev.spikeysanju.expensetracker.repo.TransactionRepo
-import dev.spikeysanju.expensetracker.utils.viewModelFactory
-import dev.spikeysanju.expensetracker.view.main.viewmodel.TransactionViewModel
+import dev.CP3405B1.expensetracker.R
+import dev.CP3405B1.expensetracker.data.local.AppDatabase
+import dev.CP3405B1.expensetracker.databinding.ActivityMainBinding
+import dev.CP3405B1.expensetracker.repo.TransactionRepo
+import dev.CP3405B1.expensetracker.utils.viewModelFactory
+import dev.CP3405B1.expensetracker.view.main.viewmodel.TransactionViewModel
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

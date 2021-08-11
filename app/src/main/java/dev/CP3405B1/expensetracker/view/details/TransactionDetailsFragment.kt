@@ -1,4 +1,4 @@
-package dev.spikeysanju.expensetracker.view.details
+package dev.CP3405B1.expensetracker.view.details
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -16,15 +16,15 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import cleanTextContent
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetracker.R
-import dev.spikeysanju.expensetracker.databinding.FragmentTransactionDetailsBinding
-import dev.spikeysanju.expensetracker.model.Transaction
-import dev.spikeysanju.expensetracker.utils.saveBitmap
-import dev.spikeysanju.expensetracker.utils.viewState.DetailState
-import dev.spikeysanju.expensetracker.view.base.BaseFragment
-import dev.spikeysanju.expensetracker.view.main.viewmodel.TransactionViewModel
+import dev.CP3405B1.expensetracker.R
+import dev.CP3405B1expensetracker.databinding.FragmentTransactionDetailsBinding
+import dev.CP3405B1.expensetracker.model.Transaction
+import dev.CP3405B1.expensetracker.utils.saveBitmap
+import dev.CP3405B1.expensetracker.utils.viewState.DetailState
+import dev.CP3405B1.expensetracker.view.base.BaseFragment
+import dev.CP3405B1.expensetracker.view.main.viewmodel.TransactionViewModel
 import hide
-import indianRupee
+import SingaporeDollar
 import kotlinx.coroutines.flow.collect
 import show
 
