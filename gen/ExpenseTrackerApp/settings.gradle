@@ -1,2 +1,4 @@
+package ExpenseTrackerApp
+
 rootProject.name = "Expense Tracker App"
 include ':app'
