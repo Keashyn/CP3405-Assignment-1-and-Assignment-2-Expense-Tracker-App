@@ -12,7 +12,7 @@
     <string name="text_expense_transaction_type">Transaction type</string>
     <string name="text_expense_tag">Tag</string>
     <string name="text_expense_note">Note</string>
-    <string name="text_expense_add_transaction">Save Transaction</string>
+    <string name="text_expense_add_transaction">Add Transaction</string>
     <string name="text_expense_singapore_dollars">S$</string>
     <string name="success_expense_saved">Transaction saved successfully</string>
     <string name="success_transaction_delete">Transaction deleted successfully!</string>
@@ -37,4 +37,21 @@
     <string name="share_message">\%s \nAmount: %s, \nTransaction-Type: %s, \nTag: %s, \nDate: %s, \nNote: %s, \nCreatedAt: %s \n\nVisit: https://github.com/Spikeysanju/Expenso</string>
     <string name="text_transaction_empty_title">No Transaction Yet!</string>
     <string name="text_transaction_empty_desc">After your first transaction you will be able to view it here</string>
+
+    <!-- Icons names -->
+    <string name="text_food">Food</string>
+    <string name="text_travel">Travel</string>
+    <string name="text_electricity">Electricity</string>
+    <string name="text_entertainment">Entertainment</string>
+    <string name="text_transportation">Transportation</string>
+    <string name="text_personal-savings">Personal-savings</string>
+    <string name="text_savings">Savings</string>
+    <string name="text_others">Others</string>
+    <string name="text_income">Income</string>
+    <string name="text_expense">Expense</string>
+    <string name="text_medical">Medical</string>
+    <string name="text_insurance">Insurance</string>
+    <string name="text_housing">Housing</string>
+    <string name="text_miscellaneous">Miscellaneous</string>
+"
 </resources>
