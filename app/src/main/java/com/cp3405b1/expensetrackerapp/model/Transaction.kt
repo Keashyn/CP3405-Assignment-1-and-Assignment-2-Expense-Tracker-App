@@ -26,5 +26,5 @@ data class Transaction(
     var createdAt: Long = System.currentTimeMillis()
 ) {
     val createdAtDateFormat: String
-    get() = DateFormat.getDateInstance().format(createdAt)
+    get() = DateFormat.getDateInstance().format(createdAt) // Date Format: Jan 11, 2021, 11:30 AM
 }
