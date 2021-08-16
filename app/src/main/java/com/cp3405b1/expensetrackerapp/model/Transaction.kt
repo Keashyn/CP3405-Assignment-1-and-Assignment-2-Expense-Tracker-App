@@ -3,6 +3,7 @@ package com.cp3405b1.expensetrackerapp.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 import java.text.DateFormat
 
 @Entity(tableName = "all_transactions")
@@ -24,7 +25,7 @@ data class Transaction(
     var note:String,
     @ColumnInfo(name = "createdAt")
     var createdAt: Long = System.currentTimeMillis()
-) {
+) : Serializable {
     val createdAtDateFormat: String
-    get() = DateFormat.getDateInstance().format(createdAt)
+        get() = DateFormat.getDateInstance().format(createdAt)
 }
