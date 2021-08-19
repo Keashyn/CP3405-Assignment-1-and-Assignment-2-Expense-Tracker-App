@@ -14,7 +14,7 @@ class AppModule {
     @Singleton
     @Provides
     fun providePreferenceManager(application: Application): UIModeDataStore {
-        return UIModeDataStore(application.applicationContext)
+        return UIModeDataStore()
     }
 
     @Singleton

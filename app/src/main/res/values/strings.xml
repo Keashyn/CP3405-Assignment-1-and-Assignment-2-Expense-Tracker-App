@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Expen$o</string>
     <string name="text_save_transaction">Save Transaction</string>
     <string name="text_ui_mode">UI Mode</string>
@@ -26,7 +26,7 @@
     <string name="text_about_license_title"><![CDATA[Attributions & License]]></string>
     <string name="text_about_license">Licensed Under Apache 2.0 License</string>
     <string name="text_about_visit_title">Visit</string>
-    <string name="text_about_visit_url"><u>https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52</u></string>
+    <string name="text_about_visit_url"><u tools:ignore="Typos">https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52</u></string>
     <string name="text_app_version">v%s (%d)</string>
     <string name="text_share_as_text">Share as Text</string>
     <string name="text_share_as_image">Share as Image</string>
