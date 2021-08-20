@@ -11,8 +11,7 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Singleton
 
 abstract class PrefsDataStore(context: Context, fileName: String) {
-    internal val dataStore: DataStore<Preferences> = context.createDataStore(fileName)
-}
+    internal val dataStore: DataStore<Preferences> = context createDataStore(fileName) }
 
 class UIModeDataStore(context: Context) :
     PrefsDataStore(
