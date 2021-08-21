@@ -96,6 +96,9 @@ class TransactionViewModel @Inject constructor(
     fun allExpense() {
         _transactionFilter.value = "Expense"
     }
+    fun transactionhistory(){
+        _transactionFilter.value="Transaction History"
+    }
 
     fun overall() {
         _transactionFilter.value = "Overall"

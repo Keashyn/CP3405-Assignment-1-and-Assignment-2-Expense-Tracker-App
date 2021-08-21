@@ -1,22 +1,24 @@
-package dev.spikeysanju.expensetracker.view.edit
+package com.cp3405b1.expensetrackerapp.view.edit
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetracker.R
-import dev.spikeysanju.expensetracker.databinding.FragmentEditTransactionBinding
-import dev.spikeysanju.expensetracker.model.Transaction
-import dev.spikeysanju.expensetracker.utils.Constants
-import dev.spikeysanju.expensetracker.view.base.BaseFragment
-import dev.spikeysanju.expensetracker.view.main.viewmodel.TransactionViewModel
-import parseDouble
-import transformIntoDatePicker
+import com.cp3405b1.expensetrackerapp.R
+import com.cp3405b1.expensetrackerapp.databinding.FragmentEditTransactionBinding
+import com.cp3405b1.expensetrackerapp.model.Transaction
+import com.cp3405b1.expensetrackerapp.utils.Constants
+import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
+import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
+import com.cp3405b1.expensetrackerapp.utils.parseDouble
+import com.cp3405b1.expensetrackerapp.utils.transformIntoDatePicker
 import java.util.*
 
 @AndroidEntryPoint
@@ -24,6 +26,7 @@ class EditTransactionFragment : BaseFragment<FragmentEditTransactionBinding, Tra
     private val args: EditTransactionFragmentArgs by navArgs()
     override val viewModel: TransactionViewModel by activityViewModels()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // receiving bundles here
@@ -32,9 +35,10 @@ class EditTransactionFragment : BaseFragment<FragmentEditTransactionBinding, Tra
         loadData(transaction)
     }
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     private fun loadData(transaction: Transaction) = with(binding) {
         addTransactionLayout.etTitle.setText(transaction.title)
-        addTransactionLayout.etAmount.setText(transaction.amount.toString())
+        addTransactionLayout.etAmount.setText(transaction.amount)
         addTransactionLayout.etTransactionType.setText(transaction.transactionType, false)
         addTransactionLayout.etTag.setText(transaction.tag, false)
         addTransactionLayout.etWhen.setText(transaction.date)
@@ -73,7 +77,7 @@ class EditTransactionFragment : BaseFragment<FragmentEditTransactionBinding, Tra
                     title.isEmpty() -> {
                         this.etTitle.error = "Title must note be empty"
                     }
-                    amount.isNaN() -> {
+                    amount.isEmpty() -> {
                         this.etAmount.error = "Amount must note be empty"
                     }
                     transactionType.isEmpty() -> {

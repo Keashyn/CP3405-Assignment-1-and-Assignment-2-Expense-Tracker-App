@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/transactionDetailsFragment"
-        android:name="dev.spikeysanju.expensetracker.view.details.TransactionDetailsFragment"
+        android:name="com.cp3405b1.expensetrackerapp.view.details.TransactionDetailsFragment"
         android:label="Details"
         tools:layout="@layout/fragment_transaction_details">
         <argument
@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/editTransactionFragment"
-        android:name="dev.spikeysanju.expensetracker.view.edit.EditTransactionFragment"
+        android:name="com.cp3405b1.expensetrackerapp.view.edit.EditTransactionFragment"
         android:label="Edit Transaction"
         tools:layout="@layout/fragment_edit_transaction">
         <argument
@@ -81,7 +81,7 @@
         tools:layout="@layout/fragment_about" />
     <dialog
         android:id="@+id/errorDialog"
-        android:name="dev.spikeysanju.expensetracker.view.dialog.ErrorDialog"
+        android:name="com.cp3405b1.expensetrackerapp.view.dialog.ErrorDialog"
         android:label="ErrorDialog"
         tools:layout="@layout/error_dialog_layout">
         <argument

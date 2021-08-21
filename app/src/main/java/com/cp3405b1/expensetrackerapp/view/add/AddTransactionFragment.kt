@@ -8,13 +8,13 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import com.cp3405b1.expensetrackerapp.R
-import dev.spikeysanju.expensetracker.databinding.FragmentAddTransactionBinding
-import dev.spikeysanju.expensetracker.model.Transaction
-import dev.spikeysanju.expensetracker.utils.Constants
-import dev.spikeysanju.expensetracker.view.base.BaseFragment
-import dev.spikeysanju.expensetracker.view.main.viewmodel.TransactionViewModel
-import parseDouble
-import transformIntoDatePicker
+import com.cp3405b1.expensetrackerapp.databinding.FragmentAddTransactionBinding
+import com.cp3405b1.expensetrackerapp.model.Transaction
+import com.cp3405b1.expensetrackerapp.utils.Constants
+import com.cp3405b1.expensetrackerapp.utils.parseDouble
+import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
+import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
+import com.cp3405b1.expensetrackerapp.utils.transformIntoDatePicker
 import java.util.*
 
 @AndroidEntryPoint
@@ -96,7 +96,7 @@ class AddTransactionFragment :
         val date = it.etWhen.text.toString()
         val note = it.etNote.text.toString()
 
-        return Transaction(title, amount, transactionType, tag, date, note)
+        return Transaction(title, amount, transactionType, tag, date, note, note = note)
     }
 
     override fun getViewBinding(
@@ -104,3 +104,8 @@ class AddTransactionFragment :
         container: ViewGroup?
     ) = FragmentAddTransactionBinding.inflate(inflater, container, false)
 }
+
+
+
+
+
