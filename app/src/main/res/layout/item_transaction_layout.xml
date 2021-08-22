@@ -7,7 +7,7 @@
     android:layout_marginStart="@dimen/dimen_8"
     android:layout_marginTop="@dimen/dimen_8"
     android:layout_marginEnd="@dimen/dimen_8"
-    app:cardBackgroundColor="@color/black"
+    app:cardBackgroundColor="#FDFDFD"
     app:cardElevation="@dimen/dimen_0">
 
     <androidx.constraintlayout.widget.ConstraintLayout
