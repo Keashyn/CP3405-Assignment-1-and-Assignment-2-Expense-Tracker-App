@@ -6,14 +6,14 @@
     <string name="text_total_expense">Total Expense</string>
     <string name="text_total_balance">Total Balance</string>
     <string name="text_recent_transactions">Recent Transactions</string>
-    <string name="text_view_all">View all</string>
+    <string name="text_view_all" tools:keep="@string/text_view_all">View all</string>
     <string name="text_expense_when">When</string>
     <string name="text_expense_amount">Amount</string>
     <string name="text_expense_transaction_type">Transaction type</string>
     <string name="text_expense_tag">Tag</string>
     <string name="text_expense_note">Note</string>
     <string name="text_expense_add_transaction">Add Transaction</string>
-    <string name="text_expense_singapore_dollars">S$</string>
+    <string name="text_expense_singapore_dollars" tools:keep="@string/text_expense_singapore_dollars">S$</string>
     <string name="success_expense_saved">Transaction saved successfully</string>
     <string name="success_transaction_delete">Transaction deleted successfully!</string>
     <string name="text_title">Title</string>
@@ -39,19 +39,19 @@
     <string name="text_transaction_empty_desc">After your first transaction you will be able to view it here</string>
 
     <!-- Icons names -->
-    <string name="text_food">Food</string>
-    <string name="text_travel">Travel</string>
-    <string name="text_electricity">Electricity</string>
-    <string name="text_entertainment">Entertainment</string>
-    <string name="text_transportation">Transportation</string>
-    <string name="text_personal-savings">Personal-savings</string>
-    <string name="text_savings">Savings</string>
-    <string name="text_others">Others</string>
-    <string name="text_income">Income</string>
-    <string name="text_expense">Expense</string>
-    <string name="text_medical">Medical</string>
-    <string name="text_insurance">Insurance</string>
-    <string name="text_housing">Housing</string>
-    <string name="text_miscellaneous">Miscellaneous</string>
+    <string name="text_food" tools:keep="@string/text_food">Food</string>
+    <string name="text_travel" tools:keep="@string/text_travel">Travel</string>
+    <string name="text_electricity" tools:keep="@string/text_electricity">Electricity</string>
+    <string name="text_entertainment" tools:keep="@string/text_entertainment">Entertainment</string>
+    <string name="text_transportation" tools:keep="@string/text_transportation">Transportation</string>
+    <string name="text_personal-savings" tools:keep="@string/text_personal_savings">Personal-savings</string>
+    <string name="text_savings" tools:keep="@string/text_savings">Savings</string>
+    <string name="text_others" tools:keep="@string/text_others">Others</string>
+    <string name="text_income" tools:keep="@string/text_income">Income</string>
+    <string name="text_expense" tools:keep="@string/text_expense">Expense</string>
+    <string name="text_medical" tools:keep="@string/text_medical">Medical</string>
+    <string name="text_insurance" tools:keep="@string/text_insurance">Insurance</string>
+    <string name="text_housing" tools:keep="@string/text_housing">Housing</string>
+    <string name="text_miscellaneous" tools:keep="@string/text_miscellaneous">Miscellaneous</string>
 
 </resources>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="blue_500">#4F9BFF</color>
-    <color name="white">#FF000000</color>
-    <color name="black">#FFFFFFFF</color>
-    <color name="surface">#1A191E</color>
-    <color name="background">#121212</color>
-    <color name="income">#6FCF97</color>
-    <color name="expense">#EB5757</color>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="blue_500" tools:ignore="DuplicateDefinition">#4F9BFF</color>
+    <color name="white" tools:ignore="DuplicateDefinition">#FF000000</color>
+    <color name="black" tools:ignore="DuplicateDefinition">#FFFFFFFF</color>
+    <color name="surface" tools:ignore="DuplicateDefinition">#1A191E</color>
+    <color name="background" tools:ignore="DuplicateDefinition">#121212</color>
+    <color name="income" tools:ignore="DuplicateDefinition">#6FCF97</color>
+    <color name="expense" tools:ignore="DuplicateDefinition">#EB5757</color>
 </resources>
