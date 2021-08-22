@@ -116,7 +116,7 @@
         android:layout_margin="@dimen/dimen_16"
         android:hint="@string/text_expense_note"
         app:boxBackgroundColor="#FFFFFF"
-        app:endIconDrawable="@drawable/ic_food"
+        app:endIconDrawable="@drawable/ic_transport"
         app:endIconMode="custom">
 
         <com.google.android.material.textfield.TextInputEditText
