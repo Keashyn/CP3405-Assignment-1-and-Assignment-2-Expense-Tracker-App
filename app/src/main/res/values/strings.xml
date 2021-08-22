@@ -45,7 +45,7 @@
     <string name="text_entertainment">Entertainment</string>
     <string name="text_transportation">Transportation</string>
     <string name="text_personal-savings">Personal-savings</string>
-    <string name="text_savings" tools:ignore="ExtraTranslation">Savings</string>
+    <string name="text_savings">Savings</string>
     <string name="text_others">Others</string>
     <string name="text_income">Income</string>
     <string name="text_expense">Expense</string>
