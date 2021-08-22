@@ -142,9 +142,9 @@ class DashboardFragment :
         val (totalIncome, totalExpense) = transaction.partition { it.transactionType == "Income" }
         val income = totalIncome.sumByDouble { it.amount }
         val expense = totalExpense.sumByDouble { it.amount }
-        incomeCardView.total.text = "+ ".plus(SingaporeDollars(income))
-        expenseCardView.total.text = "- ".plus(SingaporeDollars(expense))
-        totalBalanceView.totalBalance.text = SingaporeDollars(income - expense)
+        incomeCardView.total.text = "+ ".plus(SingaporeDollars(income.toString()))
+        expenseCardView.total.text = "- ".plus(SingaporeDollars(expense.toString()))
+        totalBalanceView.totalBalance.text = SingaporeDollars((income - expense).toString())
     }
 
     private fun observeTransaction() = lifecycleScope.launchWhenStarted {
@@ -187,7 +187,7 @@ class DashboardFragment :
         }
 
         mainDashboardScrollView.setOnScrollChangeListener(
-            NestedScrollView.OnScrollChangeListener { _, sX, sY, oX, oY ->
+            NestedScrollView.OnScrollChangeListener { _, _, sY, _, oY ->
                 if (abs(sY - oY) > 10) {
                     when {
                         sY > oY -> btnAddTransaction.hide()

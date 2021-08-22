@@ -59,7 +59,7 @@ class AddTransactionFragment :
                         title.isEmpty() -> {
                             this.etTitle.error = "Title must note be empty"
                         }
-                        amount.isNaN() -> {
+                        amount.isNaN() as Boolean -> {
                             this.etAmount.error = "Amount must note be empty"
                         }
                         transactionType.isEmpty() -> {
@@ -96,7 +96,7 @@ class AddTransactionFragment :
         val date = it.etWhen.text.toString()
         val note = it.etNote.text.toString()
 
-        return Transaction(title, amount, transactionType, tag, date, note, note = note)
+        return Transaction(title, amount.toString(), transactionType, tag, date, note, note = note)
     }
 
     override fun getViewBinding(
@@ -104,6 +104,8 @@ class AddTransactionFragment :
         container: ViewGroup?
     ) = FragmentAddTransactionBinding.inflate(inflater, container, false)
 }
+
+private fun String.isNaN() {}
 
 
 

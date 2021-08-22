@@ -15,7 +15,7 @@ abstract class PrefsDataStore(context: Context, fileName: String) {
 
 
 
-class UIModeDataStore(context: Context) :
+class UIModeDataStore() :
     PrefsDataStore(
         context,
         PREF_FILE_UI_MODE

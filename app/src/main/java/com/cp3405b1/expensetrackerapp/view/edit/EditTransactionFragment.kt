@@ -116,7 +116,7 @@ class EditTransactionFragment : BaseFragment<FragmentEditTransactionBinding, Tra
 
         return Transaction(
             title = title,
-            amount = amount,
+            amount = amount.toString(),
             transactionType = transactionType,
             tag = tag,
             date = date,

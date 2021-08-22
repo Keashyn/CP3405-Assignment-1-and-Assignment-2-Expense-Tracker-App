@@ -10,7 +10,7 @@ import java.text.DateFormat
 data class Transaction(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    var id: String = 0,
+    var id: String = 0.toString(),
     @ColumnInfo(name = "title")
     var title: String,
     @ColumnInfo(name = "amount")

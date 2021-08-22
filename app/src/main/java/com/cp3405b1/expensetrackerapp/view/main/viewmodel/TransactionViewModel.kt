@@ -35,7 +35,7 @@ class TransactionViewModel @Inject constructor(
     val detailState: StateFlow<DetailState> = _detailState
 
     // init datastore
-    private val uiModeDataStore = UIModeDataStore(application)
+    private val uiModeDataStore = UIModeDataStore()
 
     // get ui mode
     val getUIMode = uiModeDataStore.uiMode
