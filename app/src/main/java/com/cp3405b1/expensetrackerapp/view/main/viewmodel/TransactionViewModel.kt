@@ -37,6 +37,8 @@ class TransactionViewModel @Inject constructor(
     // init datastore
     private val uiModeDataStore = UIModeDataStore()
 
+    private fun UIModeDataStore(): UIModeDataStore {}
+
     // get ui mode
     val getUIMode = uiModeDataStore.uiMode
 
