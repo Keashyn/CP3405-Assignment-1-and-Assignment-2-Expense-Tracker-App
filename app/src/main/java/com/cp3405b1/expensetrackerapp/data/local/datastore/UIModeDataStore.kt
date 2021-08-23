@@ -9,16 +9,19 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Singleton
 
-
-
 abstract class PrefsDataStore(context: Context, fileName: String) {
-    internal val dataStore: DataStore<Preferences> = context createDataStore(fileName) }
+    internal val dataStore: DataStore<Preferences> = context.createDataStore()
+}
 
-private infix fun Context.createDataStore(fileName: String): DataStore<Preferences> {
+private fun Context.createDataStore(): DataStore<Preferences> {
+
 }
 
 class UIModeDataStore(context: Context) :
-    PrefsDataStore(context, PREF_FILE_UI_MODE),
+    PrefsDataStore(
+        context,
+        PREF_FILE_UI_MODE
+    ),
     UIModeImpl {
 
     // used to get the data from datastore
@@ -39,7 +42,6 @@ class UIModeDataStore(context: Context) :
         private const val PREF_FILE_UI_MODE = "ui_mode_preference"
         private val UI_MODE_KEY = booleanPreferencesKey("ui_mode")
     }
-
 }
 
 @Singleton

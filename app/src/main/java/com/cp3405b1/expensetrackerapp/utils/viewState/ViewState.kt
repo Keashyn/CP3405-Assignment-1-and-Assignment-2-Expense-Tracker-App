@@ -1,6 +1,7 @@
 package com.cp3405b1.expensetrackerapp.utils.viewState
 
 import com.cp3405b1.expensetrackerapp.model.Transaction
+
 sealed class ViewState {
     object Loading : ViewState()
     object Empty : ViewState()

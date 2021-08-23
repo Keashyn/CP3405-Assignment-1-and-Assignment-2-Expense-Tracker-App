@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cp3405b1.expensetrackerapp.R
 import com.cp3405b1.expensetrackerapp.databinding.ItemTransactionLayoutBinding
 import com.cp3405b1.expensetrackerapp.model.Transaction
-import com.cp3405b1.expensetrackerapp.utils.SingaporeDollars
+import indianRupee
 
 class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.TransactionVH>() {
 
@@ -55,7 +55,7 @@ class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.TransactionVH
                         )
                     )
 
-                    transactionAmount.text = "+ ".plus(SingaporeDollars(item.amount))
+                    transactionAmount.text = "+ ".plus(indianRupee(item.amount))
                 }
                 "Expense" -> {
                     transactionAmount.setTextColor(
@@ -64,7 +64,7 @@ class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.TransactionVH
                             R.color.expense
                         )
                     )
-                    transactionAmount.text = "- ".plus(SingaporeDollars(item.amount))
+                    transactionAmount.text = "- ".plus(indianRupee(item.amount))
                 }
             }
 
@@ -91,10 +91,10 @@ class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.TransactionVH
                     transactionIconView.setImageResource(R.drawable.ic_savings)
                 }
                 "Personal Spending" -> {
-                    transactionIconView.setImageResource(R.drawable.ic_personal_spendings)
+                    transactionIconView.setImageResource(R.drawable.ic_personal_spending)
                 }
                 "Entertainment" -> {
-                    transactionIconView.setImageResource(R.drawable.ic_entainment)
+                    transactionIconView.setImageResource(R.drawable.ic_entertainment)
                 }
                 "Miscellaneous" -> {
                     transactionIconView.setImageResource(R.drawable.ic_others)

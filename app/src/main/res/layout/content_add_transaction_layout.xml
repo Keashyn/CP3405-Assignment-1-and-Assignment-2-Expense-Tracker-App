@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal|center_vertical"
@@ -13,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
-        android:hint="@string/text_title"
-        app:boxBackgroundColor="#FFFFFF">
+        android:hint="@string/text_title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_title"
@@ -32,9 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
         android:hint="@string/text_expense_amount"
-        app:endIconDrawable="@drawable/ic_dollar_sign"
-        app:endIconMode="custom"
-        app:boxBackgroundColor="#FFFFFF"
         app:prefixText="@string/text_expense_rupees">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -53,9 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
         android:hint="@string/text_expense_transaction_type"
-        app:endIconDrawable="@drawable/ic_dropdown"
-        app:endIconMode="custom"
-        app:boxBackgroundColor="#FFFFFF">
+        app:boxBackgroundColor="@color/background">
 
         <AutoCompleteTextView
             android:id="@+id/et_transactionType"
@@ -63,8 +56,7 @@
             android:layout_height="wrap_content"
             android:inputType="none"
             android:fontFamily="@font/open_sans_regular"
-            android:labelFor="@id/et_transactionType"
-            tools:ignore="LabelFor" />
+            android:labelFor="@id/et_transactionType" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,9 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
         android:hint="@string/text_expense_tag"
-        app:endIconDrawable="@drawable/ic_dropdown"
-        app:endIconMode="custom"
-        app:boxBackgroundColor="#FFFFFF">
+        app:boxBackgroundColor="@color/background">
 
         <AutoCompleteTextView
             android:id="@+id/et_tag"
@@ -86,8 +76,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_regular"
             android:inputType="none"
-            android:labelFor="@id/et_tag"
-            tools:ignore="LabelFor" />
+            android:labelFor="@id/et_tag" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,7 +89,6 @@
         android:clickable="true"
         android:focusable="true"
         android:hint="@string/text_expense_when"
-        app:boxBackgroundColor="#FFFFFF"
         app:endIconDrawable="@drawable/ic_baseline_calendar"
         app:endIconMode="custom">
 
@@ -119,10 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
-        android:hint="@string/text_expense_note"
-        app:boxBackgroundColor="#FFFFFF"
-        app:endIconDrawable="@drawable/ic_note"
-        app:endIconMode="custom">
+        android:hint="@string/text_expense_note">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_note"

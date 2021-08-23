@@ -11,7 +11,7 @@
         android:id="@+id/detail_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF">
+        android:background="@color/white">
 
 
         <TextView
@@ -24,8 +24,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/title"
@@ -38,8 +37,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/caption_title"
-            tools:text="Samsung level earphones"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            tools:text="Samsung level earphones" />
 
 
         <TextView
@@ -52,8 +50,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            app:layout_constraintTop_toBottomOf="@id/title" />
 
         <TextView
             android:id="@+id/amount"
@@ -66,8 +63,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/caption_amount"
-            tools:text="Amount"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            tools:text="Amount" />
 
 
         <TextView
@@ -80,9 +76,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/amount"
-            android:layout_marginLeft="@dimen/dimen_16"
-            tools:ignore="RtlCompat" />
+            app:layout_constraintTop_toBottomOf="@id/amount" />
 
         <TextView
             android:id="@+id/type"
@@ -95,8 +89,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/caption_type"
-            tools:text="Income"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            tools:text="Income" />
 
 
         <TextView
@@ -109,8 +102,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/type"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            app:layout_constraintTop_toBottomOf="@id/type" />
 
         <TextView
             android:id="@+id/tag"
@@ -123,8 +115,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/caption_tag"
-            tools:text="Personal Spendings"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            tools:text="Personal Spendings" />
 
 
         <TextView
@@ -137,8 +128,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tag"
-            android:layout_marginLeft="@dimen/dimen_16"/>
+            app:layout_constraintTop_toBottomOf="@id/tag" />
 
         <TextView
             android:id="@+id/date"
@@ -151,8 +141,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/caption_when"
-            tools:text="Sunday, 18 Dec 2021"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            tools:text="Sunday, 18 Dec 2021" />
 
         <TextView
             android:id="@+id/caption_note"
@@ -164,8 +153,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/date"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            app:layout_constraintTop_toBottomOf="@id/date" />
 
         <TextView
             android:id="@+id/note"
@@ -178,8 +166,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/caption_note"
-            tools:text="Note"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            tools:text="Note" />
 
         <TextView
             android:id="@+id/caption_createdAt"
@@ -191,8 +178,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/note"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            app:layout_constraintTop_toBottomOf="@id/note" />
 
         <TextView
             android:id="@+id/createdAt"
@@ -205,8 +191,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/caption_createdAt"
-            tools:text="Sunday, 18 Dec 2021"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            tools:text="Sunday, 18 Dec 2021" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/app_icon_for_share"
@@ -215,8 +200,7 @@
             app:layout_constraintEnd_toStartOf="@+id/app_name_for_share"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="@dimen/dimen_64"
-            android:layout_height="@dimen/dimen_64"
-            tools:ignore="VectorDrawableCompat" />
+            android:layout_height="@dimen/dimen_64" />
 
         <TextView
             android:id="@+id/app_name_for_share"
@@ -231,8 +215,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            android:layout_height="wrap_content" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

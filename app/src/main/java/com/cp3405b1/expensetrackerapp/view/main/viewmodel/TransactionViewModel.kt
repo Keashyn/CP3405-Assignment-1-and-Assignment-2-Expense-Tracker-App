@@ -35,9 +35,7 @@ class TransactionViewModel @Inject constructor(
     val detailState: StateFlow<DetailState> = _detailState
 
     // init datastore
-    private val uiModeDataStore = UIModeDataStore()
-
-    private fun UIModeDataStore(): UIModeDataStore {}
+    private val uiModeDataStore = UIModeDataStore(application)
 
     // get ui mode
     val getUIMode = uiModeDataStore.uiMode
@@ -97,13 +95,6 @@ class TransactionViewModel @Inject constructor(
 
     fun allExpense() {
         _transactionFilter.value = "Expense"
-    }
-    fun transactionhistory(){
-        _transactionFilter.value="Transaction History"
-    }
-
-    fun budget(){
-        _transactionFilter.value="Budget"
     }
 
     fun overall() {

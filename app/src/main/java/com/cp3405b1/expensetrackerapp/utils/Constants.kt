@@ -1,6 +1,7 @@
 package com.cp3405b1.expensetrackerapp.utils
 
 object Constants {
+
     val transactionType = listOf("Income", "Expense")
 
     val transactionTags = listOf(
@@ -13,11 +14,6 @@ object Constants {
         "Saving & Debts",
         "Personal Spending",
         "Entertainment",
-        "Travel",
-        "Miscellaneous",
-        "Other"
+        "Miscellaneous"
     )
-
-
-
 }

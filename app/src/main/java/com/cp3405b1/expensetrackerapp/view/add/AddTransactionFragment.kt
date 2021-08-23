@@ -1,4 +1,5 @@
 package com.cp3405b1.expensetrackerapp.view.add
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,10 +12,10 @@ import com.cp3405b1.expensetrackerapp.R
 import com.cp3405b1.expensetrackerapp.databinding.FragmentAddTransactionBinding
 import com.cp3405b1.expensetrackerapp.model.Transaction
 import com.cp3405b1.expensetrackerapp.utils.Constants
-import com.cp3405b1.expensetrackerapp.utils.parseDouble
 import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
 import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
-import com.cp3405b1.expensetrackerapp.utils.transformIntoDatePicker
+import parseDouble
+import transformIntoDatePicker
 import java.util.*
 
 @AndroidEntryPoint
@@ -59,7 +60,7 @@ class AddTransactionFragment :
                         title.isEmpty() -> {
                             this.etTitle.error = "Title must note be empty"
                         }
-                        amount.isNaN() as Boolean -> {
+                        amount.isNaN() -> {
                             this.etAmount.error = "Amount must note be empty"
                         }
                         transactionType.isEmpty() -> {
@@ -96,7 +97,7 @@ class AddTransactionFragment :
         val date = it.etWhen.text.toString()
         val note = it.etNote.text.toString()
 
-        return Transaction(title, amount.toString(), transactionType, tag, date, note, note = note)
+        return Transaction(title, amount, transactionType, tag, date, note)
     }
 
     override fun getViewBinding(
@@ -104,10 +105,3 @@ class AddTransactionFragment :
         container: ViewGroup?
     ) = FragmentAddTransactionBinding.inflate(inflater, container, false)
 }
-
-private fun String.isNaN() {}
-
-
-
-
-

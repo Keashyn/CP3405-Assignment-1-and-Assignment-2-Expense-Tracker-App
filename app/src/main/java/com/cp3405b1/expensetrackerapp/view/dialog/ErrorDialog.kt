@@ -8,7 +8,6 @@ import android.view.WindowManager
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.cp3405b1.expensetrackerapp.databinding.ErrorDialogLayoutBinding
-import com.cp3405b1.expensetrackerapp.view.dialog.ErrorDialogArgs
 
 class ErrorDialog : BottomSheetDialogFragment() {
     private var _binding: ErrorDialogLayoutBinding? = null

@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TransactionDao {
+
     // used to insert new transaction
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTransaction(transaction: Transaction)

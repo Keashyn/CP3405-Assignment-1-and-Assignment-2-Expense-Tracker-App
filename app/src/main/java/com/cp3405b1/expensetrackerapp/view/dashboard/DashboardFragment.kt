@@ -8,6 +8,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.widget.NestedScrollView
+import androidx.databinding.ViewStubProxy
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -23,11 +24,11 @@ import com.cp3405b1.expensetrackerapp.utils.viewState.ViewState
 import com.cp3405b1.expensetrackerapp.view.adapter.TransactionAdapter
 import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
 import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
-import com.cp3405b1.expensetrackerapp.utils.hide
-import com.cp3405b1.expensetrackerapp.utils.SingaporeDollars
+import hide
+import indianRupee
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
-import com.cp3405b1.expensetrackerapp.utils.show
+import show
 import kotlin.math.abs
 
 @AndroidEntryPoint
@@ -72,7 +73,6 @@ class DashboardFragment :
                             getString(R.string.text_total_expense)
                         totalIncomeExpenseView.hide()
                     }
-
                 }
                 viewModel.getAllTransaction(filter)
             }
@@ -140,11 +140,11 @@ class DashboardFragment :
 
     private fun onTotalTransactionLoaded(transaction: List<Transaction>) = with(binding) {
         val (totalIncome, totalExpense) = transaction.partition { it.transactionType == "Income" }
-        val income = totalIncome.sumByDouble { it.amount.toDouble() }
-        val expense = totalExpense.sumByDouble { it.amount.toDouble() }
-        incomeCardView.total.text = "+ ".plus(SingaporeDollars(income.toString()))
-        expenseCardView.total.text = "- ".plus(SingaporeDollars(expense.toString()))
-        totalBalanceView.totalBalance.text = SingaporeDollars((income - expense).toString())
+        val income = totalIncome.sumByDouble { it.amount }
+        val expense = totalExpense.sumByDouble { it.amount }
+        incomeCardView.total.text = "+ ".plus(indianRupee(income))
+        expenseCardView.total.text = "- ".plus(indianRupee(expense))
+        totalBalanceView.totalBalance.text = indianRupee(income - expense)
     }
 
     private fun observeTransaction() = lifecycleScope.launchWhenStarted {
@@ -187,7 +187,7 @@ class DashboardFragment :
         }
 
         mainDashboardScrollView.setOnScrollChangeListener(
-            NestedScrollView.OnScrollChangeListener { _, _, sY, _, oY ->
+            NestedScrollView.OnScrollChangeListener { _, sX, sY, oX, oY ->
                 if (abs(sY - oY) > 10) {
                     when {
                         sY > oY -> btnAddTransaction.hide()
@@ -296,4 +296,12 @@ class DashboardFragment :
             item.setIcon(R.drawable.ic_day)
         }
     }
+}
+
+private fun ViewStubProxy.show() {
+    TODO("Not yet implemented")
+}
+
+private fun ViewStubProxy.hide() {
+    TODO("Not yet implemented")
 }
