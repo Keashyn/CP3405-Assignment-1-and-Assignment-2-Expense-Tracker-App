@@ -50,7 +50,7 @@
                 android:gravity="start"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
                 android:textStyle="bold"
-                tools:text="$23,103" />
+                tools:text="S$23,103" />
 
         </LinearLayout>
 
