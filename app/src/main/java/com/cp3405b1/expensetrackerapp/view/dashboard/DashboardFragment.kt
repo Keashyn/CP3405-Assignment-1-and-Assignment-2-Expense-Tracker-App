@@ -142,8 +142,8 @@ class DashboardFragment :
 
     private fun onTotalTransactionLoaded(transaction: List<Transaction>) = with(binding) {
         val (totalIncome, totalExpense) = transaction.partition { it.transactionType == "Income" }
-        val income = totalIncome.sumOf<T>({ it.amount })
-        val expense = totalExpense.sumOf<T>({ it.amount })
+        val income = totalIncome.sumByDouble { it.amount }
+        val expense = totalExpense.sumByDouble { it.amount }
         incomeCardView.total.text = "+ ".plus(indianRupee(income))
         expenseCardView.total.text = "- ".plus(indianRupee(expense))
         totalBalanceView.totalBalance.text = indianRupee(income - expense)
