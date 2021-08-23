@@ -5,16 +5,13 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.createDataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Singleton
 
 abstract class PrefsDataStore(context: Context, fileName: String) {
-    internal val dataStore: DataStore<Preferences> = context.createDataStore()
-}
-
-private fun Context.createDataStore(): DataStore<Preferences> {
-
+    internal val dataStore: DataStore<Preferences> = context.createDataStore(fileName)
 }
 
 class UIModeDataStore(context: Context) :
