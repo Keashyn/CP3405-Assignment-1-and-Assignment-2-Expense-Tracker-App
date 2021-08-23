@@ -9,12 +9,10 @@ import android.view.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ShareCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.drawToBitmap
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import cleanTextContent
 import dagger.hilt.android.AndroidEntryPoint
 import com.cp3405b1.expensetrackerapp.R
 import com.cp3405b1.expensetrackerapp.databinding.FragmentTransactionDetailsBinding
@@ -23,10 +21,7 @@ import com.cp3405b1.expensetrackerapp.utils.saveBitmap
 import com.cp3405b1.expensetrackerapp.utils.viewState.DetailState
 import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
 import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
-import hide
-import indianRupee
 import kotlinx.coroutines.flow.collect
-import show
 
 @AndroidEntryPoint
 class TransactionDetailsFragment : BaseFragment<FragmentTransactionDetailsBinding, TransactionViewModel>() {

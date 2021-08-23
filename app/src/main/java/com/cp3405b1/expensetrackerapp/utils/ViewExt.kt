@@ -1,3 +1,7 @@
+@file:Suppress("SpellCheckingInspection")
+
+package com.cp3405b1.expensetrackerapp.utils
+
 import android.app.DatePickerDialog
 import android.content.Context
 import android.view.View
