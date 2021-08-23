@@ -1,4 +1,4 @@
-package com.cp3405b1.expensetrackerapp.data.local
+package com.cp3405b1.expensetrackerapp.data.local.datastore
 
 import androidx.room.*
 import com.cp3405b1.expensetrackerapp.model.Transaction
