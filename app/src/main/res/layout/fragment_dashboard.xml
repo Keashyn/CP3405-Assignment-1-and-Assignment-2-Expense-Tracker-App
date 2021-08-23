@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.dashboard.DashboardFragment">
+    tools:context=".view.dashboard.DashboardFragment"
+        tools:ignore="Overdraw">
 
 
     <androidx.core.widget.NestedScrollView
@@ -72,7 +73,8 @@
                 android:text="@string/text_recent_transactions"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/total_income_expense_view" />
+                app:layout_constraintTop_toBottomOf="@id/total_income_expense_view"
+                    android:layout_marginLeft="@dimen/dimen_16" />
 
 
             <androidx.recyclerview.widget.RecyclerView

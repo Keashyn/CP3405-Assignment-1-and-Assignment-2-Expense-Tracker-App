@@ -15,7 +15,8 @@
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpenseTracker"
-        tools:ignore="MissingClass">
+        tools:ignore="MissingClass"
+            android:fullBackupContent="@xml/backup_descriptor">
         <activity
             android:name="com.cp3405b1.expensetrackerapp.view.main.MainActivity"
             android:configChanges="orientation|screenSize">

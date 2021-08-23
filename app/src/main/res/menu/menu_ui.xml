@@ -8,14 +8,16 @@
         android:title="@string/text_filter"
         app:actionViewClass="androidx.appcompat.widget.AppCompatSpinner"
         app:showAsAction="always"
-        tools:targetApi="o" />
+        tools:targetApi="o"
+            tools:ignore="AlwaysShowAction" />
 
     <item
         android:id="@+id/action_night_mode"
         android:checkable="true"
         android:icon="@drawable/ic_day"
         android:title="@string/text_ui_mode"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+            tools:ignore="AlwaysShowAction" />
 
     <item
         android:id="@+id/action_about"
