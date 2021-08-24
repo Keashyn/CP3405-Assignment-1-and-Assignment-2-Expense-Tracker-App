@@ -6,15 +6,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
 @HiltViewModel
-class AboutViewModel : ViewModel() {
+class AboutViewModel : ViewModel(){
     private val _url = MutableStateFlow("https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52")
     val url: StateFlow<String> = _url
 
-    fun launchLicense() {
-        _url.value = "https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52"
-    }
-
-    fun launchRepository() {
+    fun launchRepository(){
         _url.value = "https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52"
     }
 }
