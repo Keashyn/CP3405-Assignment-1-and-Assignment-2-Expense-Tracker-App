@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="32dp"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:width="32dp"
     android:height="32dp"
     android:viewportWidth="32"
-    android:viewportHeight="32">
+    android:viewportHeight="32"
+        tools:keep="@drawable/ic_home">
 
     <path
         android:strokeColor="#000000"
