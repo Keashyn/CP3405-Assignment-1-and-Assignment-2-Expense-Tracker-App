@@ -15,10 +15,11 @@
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpenseTracker"
-        tools:ignore="MissingClass">
+        tools:ignore="AllowBackup,MissingClass">
         <activity
             android:name="com.cp3405b1.expensetrackerapp.view.main.MainActivity"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+                tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
