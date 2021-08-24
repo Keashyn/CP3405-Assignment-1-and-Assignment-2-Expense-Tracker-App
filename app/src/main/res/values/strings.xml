@@ -1,5 +1,5 @@
-<resources>
-    <string name="app_name">Expen$o</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ExpenSo</string>
     <string name="text_save_transaction">Save Transaction</string>
     <string name="text_ui_mode">UI Mode</string>
     <string name="text_total_income">Total Income</string>
@@ -12,8 +12,8 @@
     <string name="text_expense_transaction_type">Transaction type</string>
     <string name="text_expense_tag">Tag</string>
     <string name="text_expense_note">Note</string>
-    <string name="text_expense_add_transaction">Add Transaction</string>
-    <string name="text_expense_singapore_dollars">S$</string>
+    <string name="text_expense_add_transaction">Save Transaction</string>
+    <string name="text_expense_rupees">₹</string>
     <string name="success_expense_saved">Transaction saved successfully</string>
     <string name="success_transaction_delete">Transaction deleted successfully!</string>
     <string name="text_title">Title</string>
@@ -26,7 +26,7 @@
     <string name="text_about_license_title"><![CDATA[Attributions & License]]></string>
     <string name="text_about_license">Licensed Under Apache 2.0 License</string>
     <string name="text_about_visit_title">Visit</string>
-    <string name="text_about_visit_url"><u>https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52</u></string>
+    <string name="text_about_visit_url"><u tools:ignore="Typos">https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52</u></string>
     <string name="text_app_version">v%s (%d)</string>
     <string name="text_share_as_text">Share as Text</string>
     <string name="text_share_as_image">Share as Image</string>
@@ -38,20 +38,4 @@
     <string name="text_transaction_empty_title">No Transaction Yet!</string>
     <string name="text_transaction_empty_desc">After your first transaction you will be able to view it here</string>
 
-    <!-- Icons names -->
-    <string name="text_food">Food</string>
-    <string name="text_travel">Travel</string>
-    <string name="text_electricity">Electricity</string>
-    <string name="text_entertainment">Entertainment</string>
-    <string name="text_transportation">Transportation</string>
-    <string name="text_personal-savings">Personal-savings</string>
-    <string name="text_savings">Savings</string>
-    <string name="text_others">Others</string>
-    <string name="text_income">Income</string>
-    <string name="text_expense">Expense</string>
-    <string name="text_medical">Medical</string>
-    <string name="text_insurance">Insurance</string>
-    <string name="text_housing">Housing</string>
-    <string name="text_miscellaneous">Miscellaneous</string>
-"
 </resources>
