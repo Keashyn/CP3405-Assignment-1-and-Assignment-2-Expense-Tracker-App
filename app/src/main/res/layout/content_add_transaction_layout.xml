@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal|center_vertical"
-    android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/et_title_view"
@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
         android:hint="@string/text_expense_amount"
+
         app:prefixText="@string/text_expense_rupees">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -49,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
         android:hint="@string/text_expense_transaction_type"
+            app:endIconDrawable="@drawable/ic_dropdown"
         app:boxBackgroundColor="@color/background">
 
         <AutoCompleteTextView
@@ -70,7 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
         android:hint="@string/text_expense_tag"
-        app:boxBackgroundColor="@color/background">
+        app:boxBackgroundColor="@color/background"
+            app:endIconDrawable="@drawable/ic_dropdown">
 
         <AutoCompleteTextView
             android:id="@+id/et_tag"
