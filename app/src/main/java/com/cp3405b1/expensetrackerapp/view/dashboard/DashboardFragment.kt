@@ -1,3 +1,5 @@
+@file:Suppress("KotlinDeprecation", "KotlinDeprecation", "unused", "unused")
+
 package com.cp3405b1.expensetrackerapp.view.dashboard
 
 import android.os.Bundle
@@ -23,12 +25,12 @@ import com.cp3405b1.expensetrackerapp.utils.viewState.ViewState
 import com.cp3405b1.expensetrackerapp.view.adapter.TransactionAdapter
 import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
 import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
-import hide
-import SingaporeDollar
+import com.cp3405b1.expensetrackerapp.utils.hide
+import com.cp3405b1.expensetrackerapp.utils.SingaporeDollar
 import androidx.databinding.ViewStubProxy
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
-import show
+import com.cp3405b1.expensetrackerapp.utils.show
 import kotlin.math.abs
 
 @AndroidEntryPoint

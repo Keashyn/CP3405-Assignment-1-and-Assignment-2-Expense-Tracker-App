@@ -2,8 +2,9 @@
 buildscript {
     ext.kotlin_version = '1.5.30'
     repositories {
-        mavenCentral()
         google()
+        //noinspection GrDeprecatedAPIUsage
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.1'
@@ -20,16 +21,14 @@ plugins {
     id "org.jlleitschuh.gradle.ktlint" version "9.4.1"
 }
 
-
-
 allprojects {
     repositories {
         google()
+        //noinspection GrDeprecatedAPIUsage
         mavenCentral()
     }
     apply plugin: "org.jlleitschuh.gradle.ktlint"
 }
-
 
 task clean(type: Delete) {
     delete rootProject.buildDir

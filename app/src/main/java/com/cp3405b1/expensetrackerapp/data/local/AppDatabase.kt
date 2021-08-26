@@ -6,12 +6,13 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.cp3405b1.expensetrackerapp.model.Transaction
 
+
 @Database(
     entities = [Transaction::class],
     version = 1,
     exportSchema = false
 )
-abstract class AppDatabase : RoomDatabase() {
+abstract class AppDatabase () : RoomDatabase() {
 
     abstract fun getTransactionDao(): TransactionDao
 

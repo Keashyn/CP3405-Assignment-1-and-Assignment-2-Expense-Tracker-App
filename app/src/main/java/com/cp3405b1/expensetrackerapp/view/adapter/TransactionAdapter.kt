@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cp3405b1.expensetrackerapp.R
 import com.cp3405b1.expensetrackerapp.databinding.ItemTransactionLayoutBinding
 import com.cp3405b1.expensetrackerapp.model.Transaction
-import SingaporeDollar
+import com.cp3405b1.expensetrackerapp.utils.SingaporeDollar
 
 class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.TransactionVH>() {
 

@@ -37,8 +37,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintStart_toEndOf="@id/transactionIconView"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Brochure Design"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            tools:text="Brochure Design" />
 
         <TextView
             android:id="@+id/transactionCategory"
@@ -50,8 +49,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:layout_constraintStart_toEndOf="@id/transactionIconView"
             app:layout_constraintTop_toBottomOf="@id/transactionName"
-            tools:text="Business work"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            tools:text="Business work" />
 
         <TextView
             android:id="@+id/transactionAmount"
@@ -65,8 +63,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="$12"
-            android:layout_marginRight="@dimen/dimen_24" />
+            tools:text="$12" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
