@@ -17,5 +17,5 @@
 #-keepattributes SourceFile,LineNumberTable
 
 # If you keep the line number information, uncomment this to
-# com.cp3405b1.expensetrackerapp.utils.hide the original source file name.
+# com.cp3405b1.expensetrackerapp.utils.com.cp3405b1.expensetrackerapp.utils.hide the original source file name.
 #-renamesourcefileattribute SourceFile

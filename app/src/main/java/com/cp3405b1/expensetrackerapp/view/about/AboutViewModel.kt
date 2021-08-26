@@ -4,13 +4,17 @@ import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-
+import javax.inject.Inject
 @HiltViewModel
-class AboutViewModel : ViewModel() {
-    private val _url = MutableStateFlow("https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52")
+class AboutViewModel @Inject constructor() : ViewModel() {
+    private val _url = MutableStateFlow("https://github.com/Spikeysanju/Expenso")
     val url: StateFlow<String> = _url
 
+    fun launchLicense() {
+        _url.value = "https://github.com/Spikeysanju/Expenso/blob/master/LICENSE"
+    }
+
     fun launchRepository() {
-        _url.value = "https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52"
+        _url.value = "https://github.com/Spikeysanju/Expenso"
     }
 }
