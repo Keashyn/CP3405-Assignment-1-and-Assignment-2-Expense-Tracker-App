@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.cp3405b1.expensetrackerapp.data.local.datastore.TransactionDao
 import com.cp3405b1.expensetrackerapp.model.Transaction
 
 @Database(

@@ -15,7 +15,6 @@ import com.cp3405b1.expensetrackerapp.repo.TransactionRepo
 import com.cp3405b1.expensetrackerapp.utils.viewModelFactory
 import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
 
-
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var navHostFragment: NavHostFragment

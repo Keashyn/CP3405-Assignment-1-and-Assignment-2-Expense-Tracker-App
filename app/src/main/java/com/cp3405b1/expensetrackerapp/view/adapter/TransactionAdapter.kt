@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cp3405b1.expensetrackerapp.R
 import com.cp3405b1.expensetrackerapp.databinding.ItemTransactionLayoutBinding
 import com.cp3405b1.expensetrackerapp.model.Transaction
-import com.cp3405b1.expensetrackerapp.utils.indianRupee
+import SingaporeDollar
 
 class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.TransactionVH>() {
 
@@ -55,7 +55,7 @@ class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.TransactionVH
                         )
                     )
 
-                    transactionAmount.text = "+ ".plus(indianRupee(item.amount))
+                    transactionAmount.text = "+ ".plus(SingaporeDollar(item.amount))
                 }
                 "Expense" -> {
                     transactionAmount.setTextColor(
@@ -64,7 +64,7 @@ class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.TransactionVH
                             R.color.expense
                         )
                     )
-                    transactionAmount.text = "- ".plus(indianRupee(item.amount))
+                    transactionAmount.text = "- ".plus(SingaporeDollar(item.amount))
                 }
             }
 

@@ -1,5 +1,3 @@
-@file:Suppress("KotlinDeprecation", "unused", "unused")
-
 package com.cp3405b1.expensetrackerapp.view.dashboard
 
 import android.os.Bundle
@@ -10,7 +8,6 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.widget.NestedScrollView
-import androidx.databinding.ViewStubProxy
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -20,20 +17,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import com.cp3405b1.expensetrackerapp.R
-import com.cp3405b1.expensetrackerapp.R.array.allFilters
 import com.cp3405b1.expensetrackerapp.databinding.FragmentDashboardBinding
 import com.cp3405b1.expensetrackerapp.model.Transaction
 import com.cp3405b1.expensetrackerapp.utils.viewState.ViewState
 import com.cp3405b1.expensetrackerapp.view.adapter.TransactionAdapter
 import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
 import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
-import com.cp3405b1.expensetrackerapp.utils.hide
-import com.cp3405b1.expensetrackerapp.utils.indianRupee
+import hide
+import SingaporeDollar
+import androidx.databinding.ViewStubProxy
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
-import com.cp3405b1.expensetrackerapp.utils.show
+import show
 import kotlin.math.abs
-
 
 @AndroidEntryPoint
 class DashboardFragment :
@@ -146,9 +142,9 @@ class DashboardFragment :
         val (totalIncome, totalExpense) = transaction.partition { it.transactionType == "Income" }
         val income = totalIncome.sumByDouble { it.amount }
         val expense = totalExpense.sumByDouble { it.amount }
-        incomeCardView.total.text = "+ ".plus(indianRupee(income))
-        expenseCardView.total.text = "- ".plus(indianRupee(expense))
-        totalBalanceView.totalBalance.text = indianRupee(income - expense)
+        incomeCardView.total.text = "+ ".plus(SingaporeDollar(income))
+        expenseCardView.total.text = "- ".plus(SingaporeDollar(expense))
+        totalBalanceView.totalBalance.text = SingaporeDollar(income - expense)
     }
 
     private fun observeTransaction() = lifecycleScope.launchWhenStarted {
@@ -225,7 +221,7 @@ class DashboardFragment :
 
         val adapter = ArrayAdapter.createFromResource(
             applicationContext(),
-            allFilters,
+            R.array.allFilters,
             R.layout.item_filter_dropdown
         )
         adapter.setDropDownViewResource(R.layout.item_filter_dropdown)
