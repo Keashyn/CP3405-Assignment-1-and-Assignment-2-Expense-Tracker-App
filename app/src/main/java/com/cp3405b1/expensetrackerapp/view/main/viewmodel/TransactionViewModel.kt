@@ -5,11 +5,11 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import com.cp3405b1.expensetrackerapp.data.local.datastore.UIModeDataStore
-import com.cp3405b1.expensetrackerapp.model.Transaction
-import com.cp3405b1.expensetrackerapp.repo.TransactionRepo
-import com.cp3405b1.expensetrackerapp.utils.viewState.DetailState
-import com.cp3405b1.expensetrackerapp.utils.viewState.ViewState
+import dev.spikeysanju.expensetrackerapp.data.local.datastore.UIModeDataStore
+import dev.spikeysanju.expensetrackerapp.model.Transaction
+import dev.spikeysanju.expensetrackerapp.repo.TransactionRepo
+import dev.spikeysanju.expensetrackerapp.utils.viewState.DetailState
+import dev.spikeysanju.expensetrackerapp.utils.viewState.ViewState
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

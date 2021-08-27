@@ -11,24 +11,27 @@ import com.cp3405b1.expensetrackerapp.model.Transaction
     version = 1,
     exportSchema = false
 )
-abstract class AppDatabase  : RoomDatabase() {
+abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun getTransactionDao(): TransactionDao
+    abstract fun getTransactionDao(): com.cp3405b1.expensetrackerapp.data.local.TransactionDao
 
     companion object {
         @Volatile
-        private var instance: AppDatabase? = null
+        private var instance: com.cp3405b1.expensetrackerapp.data.local.AppDatabase? = null
         private val LOCK = Any()
 
         // Check for DB instance if not null then get or insert or else create new DB Instance
-        operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
+        operator fun invoke(context: Context) = com.cp3405b1.expensetrackerapp.data.local.AppDatabase.Companion.instance
+            ?: synchronized(com.cp3405b1.expensetrackerapp.data.local.AppDatabase.Companion.LOCK) {
 
-            instance ?: createDatabase(context).also { instance = it }
+            com.cp3405b1.expensetrackerapp.data.local.AppDatabase.Companion.instance
+                ?: com.cp3405b1.expensetrackerapp.data.local.AppDatabase.Companion.createDatabase(context)
+                    .also { com.cp3405b1.expensetrackerapp.data.local.AppDatabase.Companion.instance = it }
         }
 
         private fun createDatabase(context: Context) = Room.databaseBuilder(
             context.applicationContext,
-            AppDatabase::class.java,
+            com.cp3405b1.expensetrackerapp.data.local.AppDatabase::class.java,
             "transaction.db"
         ).build()
     }

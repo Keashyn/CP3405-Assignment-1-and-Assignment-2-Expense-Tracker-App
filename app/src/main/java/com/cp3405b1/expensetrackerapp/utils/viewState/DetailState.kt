@@ -1,6 +1,6 @@
 package com.cp3405b1.expensetrackerapp.utils.viewState
 
-import com.cp3405b1.expensetrackerapp.model.Transaction
+import dev.spikeysanju.expensetrackerapp.model.Transaction
 
 sealed class DetailState {
     object Loading : DetailState()

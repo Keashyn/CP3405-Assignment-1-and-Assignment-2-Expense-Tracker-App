@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.cp3405b1.expensetrackerapp.view.dashboard.DashboardFragment"
+        android:name="dev.spikeysanju.expensetrackerapp.view.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard">
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/addTransactionFragment"
-        android:name="com.cp3405b1.expensetrackerapp.view.add.AddTransactionFragment"
+        android:name="dev.spikeysanju.expensetrackerapp.view.add.AddTransactionFragment"
         android:label="fragment_add_transaction"
         tools:layout="@layout/fragment_add_transaction">
         <action
@@ -45,12 +45,12 @@
     </fragment>
     <fragment
         android:id="@+id/transactionDetailsFragment"
-        android:name="com.cp3405b1.expensetrackerapp.view.details.TransactionDetailsFragment"
+        android:name="dev.spikeysanju.expensetrackerapp.view.details.TransactionDetailsFragment"
         android:label="Details"
         tools:layout="@layout/fragment_transaction_details">
         <argument
             android:name="transaction"
-            app:argType="com.cp3405b1.expensetrackerapp.model.Transaction" />
+            app:argType="dev.spikeysanju.expensetracker.model.Transaction" />
         <action
             android:id="@+id/action_transactionDetailsFragment_to_editTransactionFragment"
             app:destination="@id/editTransactionFragment"
@@ -64,24 +64,24 @@
     </fragment>
     <fragment
         android:id="@+id/editTransactionFragment"
-        android:name="com.cp3405b1.expensetrackerapp.view.edit.EditTransactionFragment"
+        android:name="dev.spikeysanju.expensetrackerapp.view.edit.EditTransactionFragment"
         android:label="Edit Transaction"
         tools:layout="@layout/fragment_edit_transaction">
         <argument
             android:name="transaction"
-            app:argType="com.cp3405b1.expensetrackerapp.model.Transaction" />
+            app:argType="dev.spikeysanju.expensetracker.model.Transaction" />
         <action
             android:id="@+id/edit_to_details"
             app:destination="@id/transactionDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.cp3405b1.expensetrackerapp.view.about.AboutFragment"
+        android:name="dev.spikeysanju.expensetrackerapp.view.about.AboutFragment"
         android:label="About"
         tools:layout="@layout/fragment_about" />
     <dialog
         android:id="@+id/errorDialog"
-        android:name="com.cp3405b1.expensetrackerapp.view.dialog.ErrorDialog"
+        android:name="dev.spikeysanju.expensetrackerapp.view.dialog.ErrorDialog"
         android:label="ErrorDialog"
         tools:layout="@layout/error_dialog_layout">
         <argument

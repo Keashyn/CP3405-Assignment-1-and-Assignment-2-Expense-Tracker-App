@@ -8,19 +8,18 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import dagger.hilt.android.AndroidEntryPoint
-import com.cp3405b1.expensetrackerapp.R
-import com.cp3405b1.expensetrackerapp.data.local.AppDatabase
-import com.cp3405b1.expensetrackerapp.databinding.ActivityMainBinding
-import com.cp3405b1.expensetrackerapp.repo.TransactionRepo
-import com.cp3405b1.expensetrackerapp.utils.viewModelFactory
-import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
+import dev.spikeysanju.expensetrackerapp.R
+import dev.spikeysanju.expensetrackerapp.databinding.ActivityMainBinding
+import dev.spikeysanju.expensetrackerapp.repo.TransactionRepo
+import dev.spikeysanju.expensetrackerapp.utils.viewModelFactory
+import dev.spikeysanju.expensetrackerapp.view.main.viewmodel.TransactionViewModel
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var navHostFragment: NavHostFragment
     private lateinit var appBarConfiguration: AppBarConfiguration
 
-    private val repo by lazy { TransactionRepo(AppDatabase(this)) }
+    private val repo by lazy { TransactionRepo(com.cp3405b1.expensetrackerapp.data.local.AppDatabase(this)) }
     private val viewModel: TransactionViewModel by viewModels {
         viewModelFactory { TransactionViewModel(this.application, repo) }
     }
