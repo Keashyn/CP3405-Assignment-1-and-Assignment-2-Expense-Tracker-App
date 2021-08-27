@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32"
+    tools:keep="@drawable/ic_filter">
+
+    <path
+            android:fillColor="#000000"
+            android:pathData="M2 7h0.142A3.981 3.981 0 0 0 9.858 7H30a1 1 0 0 0 0-2H9.858A3.981 3.981 0 0 0 2.142 5H2A1 1 0 0 0 2 7zM6 4A2 2 0 1 1 4 6 2 2 0 0 1 6 4zM30 15h-0.142a3.981 3.981 0 0 0-7.716 0H2a1 1 0 0 0 0 2H22.142a3.981 3.981 0 0 0 7.716 0H30a1 1 0 0 0 0-2zm-4 3a2 2 0 1 1 2-2A2 2 0 0 1 26 18zM30 25H19.858a3.981 3.981 0 0 0-7.716 0H2a1 1 0 0 0 0 2H12.142a3.981 3.981 0 0 0 7.716 0H30a1 1 0 0 0 0-2zM16 28a2 2 0 1 1 2-2A2 2 0 0 1 16 28z" />
+</vector>

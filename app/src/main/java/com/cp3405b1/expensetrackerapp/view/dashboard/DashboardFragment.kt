@@ -1,3 +1,5 @@
+@file:Suppress("KotlinDeprecation", "KotlinDeprecation", "unused", "unused")
+
 package com.cp3405b1.expensetrackerapp.view.dashboard
 
 import android.os.Bundle
@@ -7,21 +9,29 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetrackerapp.R
-import dev.spikeysanju.expensetrackerapp.databinding.FragmentDashboardBinding
-import dev.spikeysanju.expensetrackerapp.model.Transaction
-import dev.spikeysanju.expensetrackerapp.utils.viewState.ViewState
-import dev.spikeysanju.expensetrackerapp.view.adapter.TransactionAdapter
-import dev.spikeysanju.expensetrackerapp.view.base.BaseFragment
-import dev.spikeysanju.expensetrackerapp.view.main.viewmodel.TransactionViewModel
+import com.cp3405b1.expensetrackerapp.R
+import com.cp3405b1.expensetrackerapp.databinding.FragmentDashboardBinding
+import com.cp3405b1.expensetrackerapp.model.Transaction
+import com.cp3405b1.expensetrackerapp.utils.viewState.ViewState
+import com.cp3405b1.expensetrackerapp.view.adapter.TransactionAdapter
+import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
+import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
+import com.cp3405b1.expensetrackerapp.utils.hide
+import com.cp3405b1.expensetrackerapp.utils.SingaporeDollar
+import androidx.databinding.ViewStubProxy
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.first
+import com.cp3405b1.expensetrackerapp.utils.show
+import kotlin.math.abs
 
 @AndroidEntryPoint
 class DashboardFragment :
@@ -134,9 +144,9 @@ class DashboardFragment :
         val (totalIncome, totalExpense) = transaction.partition { it.transactionType == "Income" }
         val income = totalIncome.sumByDouble { it.amount }
         val expense = totalExpense.sumByDouble { it.amount }
-        incomeCardView.total.text = "+ ".plus(indianRupee(income))
-        expenseCardView.total.text = "- ".plus(indianRupee(expense))
-        totalBalanceView.totalBalance.text = indianRupee(income - expense)
+        incomeCardView.total.text = "+ ".plus(SingaporeDollar(income))
+        expenseCardView.total.text = "- ".plus(SingaporeDollar(expense))
+        totalBalanceView.totalBalance.text = SingaporeDollar(income - expense)
     }
 
     private fun observeTransaction() = lifecycleScope.launchWhenStarted {
@@ -288,4 +298,12 @@ class DashboardFragment :
             item.setIcon(R.drawable.ic_day)
         }
     }
+}
+
+private fun ViewStubProxy.show() {
+    TODO("Not yet implemented")
+}
+
+private fun ViewStubProxy.hide() {
+    TODO("Not yet implemented")
 }

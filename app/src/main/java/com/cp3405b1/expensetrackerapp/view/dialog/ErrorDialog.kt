@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import dev.spikeysanju.expensetrackerapp.databinding.ErrorDialogLayoutBinding
+import com.cp3405b1.expensetrackerapp.databinding.ErrorDialogLayoutBinding
 
 class ErrorDialog : BottomSheetDialogFragment() {
     private var _binding: ErrorDialogLayoutBinding? = null

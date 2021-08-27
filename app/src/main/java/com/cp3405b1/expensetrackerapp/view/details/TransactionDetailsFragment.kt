@@ -9,19 +9,24 @@ import android.view.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ShareCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.drawToBitmap
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.cp3405b1.expensetrackerapp.utils.cleanTextContent
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetrackerapp.R
-import dev.spikeysanju.expensetrackerapp.databinding.FragmentTransactionDetailsBinding
-import dev.spikeysanju.expensetrackerapp.model.Transaction
-import dev.spikeysanju.expensetrackerapp.utils.saveBitmap
-import dev.spikeysanju.expensetrackerapp.utils.viewState.DetailState
-import dev.spikeysanju.expensetrackerapp.view.base.BaseFragment
-import dev.spikeysanju.expensetrackerapp.view.main.viewmodel.TransactionViewModel
+import com.cp3405b1.expensetrackerapp.R
+import com.cp3405b1.expensetrackerapp.databinding.FragmentTransactionDetailsBinding
+import com.cp3405b1.expensetrackerapp.model.Transaction
+import com.cp3405b1.expensetrackerapp.utils.saveBitmap
+import com.cp3405b1.expensetrackerapp.utils.viewState.DetailState
+import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
+import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
+import com.cp3405b1.expensetrackerapp.utils.hide
+import com.cp3405b1.expensetrackerapp.utils.SingaporeDollar
 import kotlinx.coroutines.flow.collect
+import com.cp3405b1.expensetrackerapp.utils.show
 
 @AndroidEntryPoint
 class TransactionDetailsFragment : BaseFragment<FragmentTransactionDetailsBinding, TransactionViewModel>() {
@@ -80,7 +85,7 @@ class TransactionDetailsFragment : BaseFragment<FragmentTransactionDetailsBindin
 
     private fun onDetailsLoaded(transaction: Transaction) = with(binding.transactionDetails) {
         title.text = transaction.title
-        amount.text = indianRupee(transaction.amount).cleanTextContent
+        amount.text = SingaporeDollar(transaction.amount).cleanTextContent
         type.text = transaction.transactionType
         tag.text = transaction.tag
         date.text = transaction.date

@@ -6,14 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetrackerapp.R
-import dev.spikeysanju.expensetrackerapp.databinding.FragmentAddTransactionBinding
-import dev.spikeysanju.expensetrackerapp.model.Transaction
-import dev.spikeysanju.expensetrackerapp.utils.Constants
-import dev.spikeysanju.expensetrackerapp.view.base.BaseFragment
-import dev.spikeysanju.expensetrackerapp.view.main.viewmodel.TransactionViewModel
-import parseDouble
+import com.cp3405b1.expensetrackerapp.R
+import com.cp3405b1.expensetrackerapp.databinding.FragmentAddTransactionBinding
+import com.cp3405b1.expensetrackerapp.model.Transaction
+import com.cp3405b1.expensetrackerapp.utils.Constants
+import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
+import com.cp3405b1.expensetrackerapp.view.main.viewmodel.TransactionViewModel
+import com.cp3405b1.expensetrackerapp.utils.parseDouble
+import com.cp3405b1.expensetrackerapp.utils.transformIntoDatePicker
 import java.util.*
 
 @AndroidEntryPoint

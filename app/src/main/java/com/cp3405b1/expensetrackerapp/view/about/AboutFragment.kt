@@ -1,5 +1,6 @@
 package com.cp3405b1.expensetrackerapp.view.about
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -8,9 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetrackerapp.BuildConfig
-import dev.spikeysanju.expensetrackerapp.databinding.FragmentAboutBinding
-import dev.spikeysanju.expensetrackerapp.view.base.BaseFragment
+import com.cp3405b1.expensetrackerapp.BuildConfig
+import com.cp3405b1.expensetrackerapp.R
+import com.cp3405b1.expensetrackerapp.databinding.FragmentAboutBinding
+import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
 
 @AndroidEntryPoint
 class AboutFragment : BaseFragment<FragmentAboutBinding, AboutViewModel>() {
@@ -20,6 +22,7 @@ class AboutFragment : BaseFragment<FragmentAboutBinding, AboutViewModel>() {
         initViews()
     }
 
+    @SuppressLint("StringFormatMatches")
     private fun initViews() = with(binding) {
         appVersion.text = getString(
             R.string.text_app_version,

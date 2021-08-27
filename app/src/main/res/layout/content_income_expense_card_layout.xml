@@ -38,7 +38,8 @@
                 android:fontFamily="@font/open_sans_semibold"
                 android:gravity="center_horizontal"
                 android:text="@string/text_total_income"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Overline" />
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
+                    tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/total"
@@ -50,7 +51,8 @@
                 android:gravity="start"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
                 android:textStyle="bold"
-                tools:text="$23,103" />
+                tools:text="S$23,103"
+                    tools:ignore="RtlCompat" />
 
         </LinearLayout>
 

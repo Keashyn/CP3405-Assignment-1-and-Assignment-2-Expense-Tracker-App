@@ -5,7 +5,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
-import dev.spikeysanju.expensetrackerapp.data.local.datastore.UIModeDataStore
+import com.cp3405b1.expensetrackerapp.data.local.AppDatabase
+import com.cp3405b1.expensetrackerapp.data.local.datastore.UIModeDataStore
 import javax.inject.Singleton
 
 @InstallIn(ActivityComponent::class)
@@ -20,7 +21,7 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun provideNoteDatabase(application: Application): com.cp3405b1.expensetrackerapp.data.local.AppDatabase {
-        return com.cp3405b1.expensetrackerapp.data.local.AppDatabase.invoke(application.applicationContext)
+    fun provideNoteDatabase(application: Application): AppDatabase {
+        return AppDatabase.invoke(application.applicationContext)
     }
 }

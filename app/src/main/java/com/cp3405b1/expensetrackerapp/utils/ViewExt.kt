@@ -1,3 +1,5 @@
+package com.cp3405b1.expensetrackerapp.utils
+
 import android.app.DatePickerDialog
 import android.content.Context
 import android.view.View
@@ -48,11 +50,11 @@ fun TextInputEditText.transformIntoDatePicker(
     }
 }
 
-// indian rupee converter
-fun indianRupee(amount: Double): String {
+// Singapore Dollar converter
+fun SingaporeDollar(amount: Double): String {
     val format: NumberFormat = NumberFormat.getCurrencyInstance()
     format.maximumFractionDigits = 0
-    format.currency = Currency.getInstance("INR")
+    format.currency = Currency.getInstance("SGD")
     return format.format(amount)
 }
 

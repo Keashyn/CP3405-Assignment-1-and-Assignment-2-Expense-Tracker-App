@@ -1,9 +1,10 @@
 package com.cp3405b1.expensetrackerapp.repo
 
-import dev.spikeysanju.expensetrackerapp.model.Transaction
+import com.cp3405b1.expensetrackerapp.data.local.AppDatabase
+import com.cp3405b1.expensetrackerapp.model.Transaction
 import javax.inject.Inject
 
-class TransactionRepo @Inject constructor(private val db: com.cp3405b1.expensetrackerapp.data.local.AppDatabase) {
+class TransactionRepo @Inject constructor(private val db: AppDatabase) {
 
     // insert transaction
     suspend fun insert(transaction: Transaction) = db.getTransactionDao().insertTransaction(
