@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.cp3405b1.expensetrackerapp">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
 
     <application
         android:name=".app.ExpenseTrackerApp"
-        android:allowBackup="true"
-        android:icon="@drawable/ic_setting"
+        android:allowBackup="True"
+        android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ExpenseTracker">
+        android:theme="@style/Theme.ExpenseTracker"
+        tools:ignore="AllowBackup,MissingClass">
         <activity
             android:name=".view.main.MainActivity"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:exported="True">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
