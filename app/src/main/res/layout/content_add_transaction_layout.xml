@@ -20,7 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_regular"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="TextContrastCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -39,7 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_regular"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            tools:ignore="TextContrastCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,10 +59,10 @@
             android:id="@+id/et_transactionType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
             android:fontFamily="@font/open_sans_regular"
+            android:inputType="none"
             android:labelFor="@id/et_transactionType"
-                tools:ignore="LabelFor" />
+            tools:ignore="LabelFor,TextContrastCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,9 +82,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_regular"
+            android:hintTextColor="#546E7A"
             android:inputType="none"
             android:labelFor="@id/et_tag"
-                tools:ignore="LabelFor" />
+            tools:ignore="LabelFor,TextContrastCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,7 +106,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_regular"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="TextContrastCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,9 +124,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_regular"
+            android:hintTextColor="#546E7A"
             android:inputType="text"
             android:maxLength="240"
-            android:maxLines="3" />
+            android:maxLines="3"
+            tools:ignore="TextContrastCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
