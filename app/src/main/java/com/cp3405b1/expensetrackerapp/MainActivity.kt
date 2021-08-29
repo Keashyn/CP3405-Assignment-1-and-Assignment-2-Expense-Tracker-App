@@ -1,4 +1,4 @@
-package com.cp3405b1.expensetreackerapp
+package com.cp3405b1.expensetrackerapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

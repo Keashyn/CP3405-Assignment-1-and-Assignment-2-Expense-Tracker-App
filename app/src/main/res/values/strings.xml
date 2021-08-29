@@ -1,12 +1,12 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">ExpenSo</string>
+<resources>
+    <string name="app_name">Expen$o</string>
     <string name="text_save_transaction">Save Transaction</string>
     <string name="text_ui_mode">UI Mode</string>
     <string name="text_total_income">Total Income</string>
     <string name="text_total_expense">Total Expense</string>
     <string name="text_total_balance">Total Balance</string>
     <string name="text_recent_transactions">Recent Transactions</string>
-    <string name="text_view_all" tools:keep="@string/text_view_all">View all</string>
+    <string name="text_view_all">View all</string>
     <string name="text_expense_when">When</string>
     <string name="text_expense_amount">Amount</string>
     <string name="text_expense_transaction_type">Transaction type</string>
@@ -26,8 +26,8 @@
     <string name="text_about_license_title"><![CDATA[Attributions & License]]></string>
     <string name="text_about_license">Licensed Under Apache 2.0 License</string>
     <string name="text_about_visit_title">Visit</string>
-    <string name="text_about_visit_url"><u tools:ignore="Typos">https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52</u></string>
-    <string name="text_app_version" tools:ignore="StringFormatMatches">v%s (%d)</string>
+    <string name="text_about_visit_url"><u>https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52</u></string>
+    <string name="text_app_version">v%s (%d)</string>
     <string name="text_share_as_text">Share as Text</string>
     <string name="text_share_as_image">Share as Image</string>
     <string name="text_delete">Delete</string>
@@ -37,6 +37,6 @@
     <string name="share_message">\%s \nAmount: %s, \nTransaction-Type: %s, \nTag: %s, \nDate: %s, \nNote: %s, \nCreatedAt: %s \n\nVisit: https://github.com/Spikeysanju/Expenso</string>
     <string name="text_transaction_empty_title">No Transaction Yet!</string>
     <string name="text_transaction_empty_desc">After your first transaction you will be able to view it here</string>
-    <string name="transaction_history" tools:keep="@string/transaction_history">Transaction History</string>
+    <string name="transaction_history">Transaction History</string>
 
 </resources>
