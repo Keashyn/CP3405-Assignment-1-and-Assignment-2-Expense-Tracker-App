@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Expen$o</string>
+    <string name="text_total_income">Total Income</string>
+    <string name="text_all_income">All Income</string>
+    <string name="text_tv_subscription">TV Subscription \n Entertainment</string>
+    <string name="text_tv_subscription_details">+S$130 \n Oct 30, 2021</string>
 </resources>
