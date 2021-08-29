@@ -1,4 +1,4 @@
-package com.cp3405b1.expensetrackerapp
+package com.cp3405b1.expensetreackerapp
 
 import org.junit.Test
 
