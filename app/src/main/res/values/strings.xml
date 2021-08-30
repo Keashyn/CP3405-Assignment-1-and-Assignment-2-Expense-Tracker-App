@@ -35,6 +35,7 @@
     <string name="text_appversion"> Version 1.0 </string>
     <string name="text_page_name"> AboutUs </string>
 
+
     <!-- share transaction -->
     <string name="share_message">\%s \nAmount: %s, \nTransaction-Type: %s, \nTag: %s, \nDate: %s, \nNote: %s, \nCreatedAt: %s \n\nVisit: https://github.com/Spikeysanju/Expenso</string>
     <string name="text_transaction_empty_title">No Transaction Yet!</string>
