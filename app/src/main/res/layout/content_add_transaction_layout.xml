@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
         android:hint="@string/text_expense_amount"
-        app:prefixText="@string/text_expense_rupees">
+        app:prefixText="@string/text_expense_singapore_dollar">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_amount"

@@ -1,0 +1,22 @@
+Index: app/src/main/java/com/cp3405b1/expensetrackerapp/db/TransactionDao.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.cp3405b1.expensetrackerapp.db\n\n\ninterface TransactionDao {\n\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/cp3405b1/expensetrackerapp/db/TransactionDao.kt b/app/src/main/java/com/cp3405b1/expensetrackerapp/db/TransactionDao.kt
+--- a/app/src/main/java/com/cp3405b1/expensetrackerapp/db/TransactionDao.kt	(revision e5a0dec24bc5bf4c29f8ca459285ec8ad7654ded)
++++ b/app/src/main/java/com/cp3405b1/expensetrackerapp/db/TransactionDao.kt	(date 1630394667681)
+@@ -1,7 +1,9 @@
+ package com.cp3405b1.expensetrackerapp.db
+ 
++import androidx.room.Dao
+ 
+-interface TransactionDao {
+ 
+-}
++@Dao
++interface TransactionDao
++
+ 
