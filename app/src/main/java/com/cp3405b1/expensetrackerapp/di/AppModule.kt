@@ -1,8 +1,9 @@
 package com.cp3405b1.expensetrackerapp.di
 
 import android.app.Application
-import com.cp3405b1.expensetrackerapp.datastore.UIModeDataStore
-import com.cp3405b1.expensetrackerapp.datastore.AppDatabase
+import com.cp3405b1.expensetrackerapp.data.local.datastore.UIModeDataStore
+import com.cp3405b1.expensetrackerapp.db.AppDatabase
+
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

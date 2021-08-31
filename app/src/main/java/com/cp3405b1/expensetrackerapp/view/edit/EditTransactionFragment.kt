@@ -17,7 +17,7 @@ import com.cp3405b1.expensetrackerapp.utils.transformIntoDatePicker
 import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
 import com.cp3405b1.expensetrackerapp.view.viewmodel.TransactionViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetracker.view.edit.EditTransactionFragmentArgs
+import com.cp3405b1.expensetrackerapp.view.edit.EditTransactionFragmentArgs
 
 import java.util.*
 

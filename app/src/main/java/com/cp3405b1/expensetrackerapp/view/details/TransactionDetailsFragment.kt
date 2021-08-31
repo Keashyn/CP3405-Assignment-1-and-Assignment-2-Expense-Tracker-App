@@ -23,8 +23,8 @@ import com.cp3405b1.expensetrackerapp.view.base.BaseFragment
 import com.cp3405b1.expensetrackerapp.view.viewmodel.TransactionViewModel
 
 import dagger.hilt.android.AndroidEntryPoint
-import dev.spikeysanju.expensetracker.view.details.TransactionDetailsFragmentArgs
-import dev.spikeysanju.expensetracker.view.details.TransactionDetailsFragmentDirections
+import com.cp3405b1.expensetrackerapp.view.details.TransactionDetailsFragmentArgs
+import com.cp3405b1.expensetrackerapp.view.details.TransactionDetailsFragmentDirections
 
 import kotlinx.coroutines.flow.collect
 
