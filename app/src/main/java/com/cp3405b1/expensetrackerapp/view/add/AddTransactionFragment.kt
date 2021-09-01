@@ -91,19 +91,4 @@ class AddTransactionFragment :
         }
     }
 
-    private fun getTransactionContent(): Transaction = binding.addTransactionLayout.let {
-        val title = it.etTitle.text.toString()
-        val amount = parseDouble(it.etAmount.text.toString())
-        val transactionType = it.etTransactionType.text.toString()
-        val tag = it.etTag.text.toString()
-        val date = it.etWhen.text.toString()
-        val note = it.etNote.text.toString()
-
-        return Transaction(title, amount, transactionType, tag, date, note)
-    }
-
-    override fun getViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?
-    ) = FragmentAddTransactionBinding.inflate(inflater, container, false)
-}
+ 
