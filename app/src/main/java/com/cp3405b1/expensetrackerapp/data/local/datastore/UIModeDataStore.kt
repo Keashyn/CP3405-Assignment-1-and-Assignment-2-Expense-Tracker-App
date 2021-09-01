@@ -44,5 +44,5 @@ class UIModeDataStore(context: Context) :
 @Singleton
 interface UIModeImpl {
     val uiMode: Flow<Boolean>
-    suspend fun saveToDataStore(isNightMode: Boolean)
+    suspend fun saveToDataStore(isNightMode: Boolean).
 }
