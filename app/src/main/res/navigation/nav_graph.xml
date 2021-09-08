@@ -11,6 +11,13 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard">
         <action
+            android:id="@+id/action_dashboardFragment_to_viewBudgetFragment"
+            app:destination="@id/viewBudgetFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
             android:id="@+id/action_dashboardFragment_to_addTransactionFragment"
             app:destination="@id/addTransactionFragment"
             app:enterAnim="@anim/slide_in_right"
@@ -79,6 +86,11 @@
         android:name="com.cp3405b1.expensetrackerapp.view.about.AboutFragment"
         android:label="About"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/viewBudgetFragment"
+        android:name="com.cp3405b1.expensetrackerapp.view.budget.ViewBudgetFragment"
+        android:label="fragment_view_budget"
+        tools:layout="@layout/fragment_view_budget"/>
     <dialog
         android:id="@+id/errorDialog"
         android:name="com.cp3405b1.expensetrackerapp.view.dialog.ErrorDialog"

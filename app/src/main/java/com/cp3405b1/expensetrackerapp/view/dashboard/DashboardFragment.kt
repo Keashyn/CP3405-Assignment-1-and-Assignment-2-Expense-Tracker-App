@@ -262,21 +262,14 @@ class DashboardFragment :
             }
         }
 
-        // Set the item state
-        lifecycleScope.launchWhenStarted {
-            val isChecked = viewModel.getUIMode.first()
-            val uiMode = menu.findItem(R.id.action_night_mode)
-            uiMode.isChecked = isChecked
-            setUIMode(uiMode, isChecked)
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here.
         return when (item.itemId) {
-            R.id.action_night_mode -> {
-                item.isChecked = !item.isChecked
-                setUIMode(item, item.isChecked)
+
+            R.id.action_view_budget_fragment -> {
+                findNavController().navigate(R.id.action_dashboardFragment_to_viewBudgetFragment)
                 true
             }
 

@@ -2,7 +2,7 @@
     <string name="app_name">Expen$o</string>
     <string name="text_all_income">All Income</string>
     <string name="text_save_transaction">Save Transaction</string>
-    <string name="text_ui_mode">UI Mode</string>
+    <string name="text_view_budget">All Budgets</string>
     <string name="text_total_income">Total Income</string>
     <string name="text_total_expense">Total Expense</string>
     <string name="text_total_balance">Total Balance</string>

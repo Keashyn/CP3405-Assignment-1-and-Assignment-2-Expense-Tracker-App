@@ -9,10 +9,9 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/action_night_mode"
-        android:checkable="true"
-        android:icon="@drawable/ic_day"
-        android:title="@string/text_ui_mode"
+        android:id="@+id/action_view_budget_fragment"
+        android:icon="@drawable/ic_entertainment"
+        android:title="@string/text_view_budget"
         app:showAsAction="always" />
 
     <item

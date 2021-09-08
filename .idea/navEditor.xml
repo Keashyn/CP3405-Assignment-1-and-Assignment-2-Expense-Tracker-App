@@ -67,6 +67,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_dashboardFragment_to_viewBudgetFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -127,6 +132,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="viewBudgetFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="51" />
+                            <option name="y" value="590" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
