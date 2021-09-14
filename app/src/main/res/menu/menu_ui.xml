@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/action_view_budget_fragment"
-        android:icon="@drawable/ic_entertainment"
+        android:icon="@drawable/ic_budget"
         android:title="@string/text_view_budget"
         app:showAsAction="always" />
 

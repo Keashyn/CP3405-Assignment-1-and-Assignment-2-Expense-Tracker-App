@@ -90,7 +90,11 @@
         android:id="@+id/viewBudgetFragment"
         android:name="com.cp3405b1.expensetrackerapp.view.budget.ViewBudgetFragment"
         android:label="fragment_view_budget"
-        tools:layout="@layout/fragment_view_budget"/>
+        tools:layout="@layout/fragment_view_budget">
+        <action
+            android:id="@+id/action_viewBudgetFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
     <dialog
         android:id="@+id/errorDialog"
         android:name="com.cp3405b1.expensetrackerapp.view.dialog.ErrorDialog"
