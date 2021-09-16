@@ -269,7 +269,7 @@ class DashboardFragment :
         return when (item.itemId) {
 
             R.id.action_view_budget_fragment -> {
-                findNavController().navigate(R.id.action_dashboardFragment_to_viewBudgetFragment)
+                findNavController().navigate(R.id.action_dashboardFragment_to_ViewBudgetFragment)
                 true
             }
 

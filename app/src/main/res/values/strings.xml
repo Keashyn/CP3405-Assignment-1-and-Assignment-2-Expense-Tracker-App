@@ -39,4 +39,22 @@
     <string name="share_message">\%s \nAmount: %s, \nTransaction-Type: %s, \nTag: %s, \nDate: %s, \nNote: %s, \nCreatedAt: %s \n\nVisit: https://github.com/Spikeysanju/Expenso</string>
     <string name="text_transaction_empty_title">No Transaction Yet!</string>
     <string name="text_transaction_empty_desc">After your first transaction you will be able to view it here</string>
+
+    <!-- budget -->
+    <string-array name='Category'>
+        <item>Housing</item>
+        <item>Transportation</item>
+        <item>Food</item>
+        <item>Utilities</item>
+        <item>Insurance</item>
+        <item>Healthcare</item>
+        <item>Savings</item>
+        <item>Personal Spending</item>
+        <item>Entertainment</item>
+        <item>Miscellaneous</item>
+    </string-array>
+    <string-array name="Repeat">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
 </resources>

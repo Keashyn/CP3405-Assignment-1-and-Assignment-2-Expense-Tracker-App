@@ -11,8 +11,8 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard">
         <action
-            android:id="@+id/action_dashboardFragment_to_viewBudgetFragment"
-            app:destination="@id/viewBudgetFragment"
+            android:id="@+id/action_dashboardFragment_to_ViewBudgetFragment"
+            app:destination="@id/ViewBudgetFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -86,15 +86,45 @@
         android:name="com.cp3405b1.expensetrackerapp.view.about.AboutFragment"
         android:label="About"
         tools:layout="@layout/fragment_about" />
+
+
+
     <fragment
-        android:id="@+id/viewBudgetFragment"
-        android:name="com.cp3405b1.expensetrackerapp.view.budget.ViewBudgetFragment"
-        android:label="fragment_view_budget"
-        tools:layout="@layout/fragment_view_budget">
+        android:id="@+id/ViewBudgetFragment"
+        android:name="com.cp3405b1.expensetrackerapp.budget.ListBudgetFragment"
+        android:label="Budget List"
+        tools:layout="@layout/fragment_view_budget" >
         <action
-            android:id="@+id/action_viewBudgetFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
+            android:id="@+id/action_ViewBudgetFragment_to_AddBudgetFragment"
+            app:destination="@id/AddBudgetFragment" />
+        <action
+            android:id="@+id/action_ViewBudgetFragment_to_EditBudgetFragment"
+            app:destination="@id/EditBudgetFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/AddBudgetFragment"
+        android:name="com.cp3405b1.expensetrackerapp.budget.AddBudgetFragment"
+        android:label="Add Budget"
+        tools:layout="@layout/fragment_add_budget" >
+        <action
+            android:id="@+id/action_AddBudgetFragment_to_ViewBudgetFragment"
+            app:destination="@id/ViewBudgetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/EditBudgetFragment"
+        android:name="com.cp3405b1.expensetrackerapp.budget.EditBudgetFragment"
+        android:label="Edit Budget"
+        tools:layout="@layout/fragment_edit_budget" >
+        <action
+            android:id="@+id/action_EditBudgetFragment_to_ViewBudgetFragment"
+            app:destination="@id/ViewBudgetFragment" />
+        <argument
+            android:name="currentBudget"
+            app:argType="com.cp3405b1.expensetrackerapp.budget.Budget" />
+    </fragment>
+
+
+
     <dialog
         android:id="@+id/errorDialog"
         android:name="com.cp3405b1.expensetrackerapp.view.dialog.ErrorDialog"
@@ -106,5 +136,6 @@
         <argument
             android:name="message"
             app:argType="string" />
+
     </dialog>
 </navigation>
