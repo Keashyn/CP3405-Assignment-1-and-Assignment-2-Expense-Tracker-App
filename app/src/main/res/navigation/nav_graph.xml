@@ -91,7 +91,7 @@
 
     <fragment
         android:id="@+id/ViewBudgetFragment"
-        android:name="com.cp3405b1.expensetrackerapp.budget.ListBudgetFragment"
+        android:name="com.cp3405b1.expensetrackerapp.view.budget.ListBudgetFragment"
         android:label="Budget List"
         tools:layout="@layout/fragment_view_budget" >
         <action
@@ -103,7 +103,7 @@
     </fragment>
     <fragment
         android:id="@+id/AddBudgetFragment"
-        android:name="com.cp3405b1.expensetrackerapp.budget.AddBudgetFragment"
+        android:name="com.cp3405b1.expensetrackerapp.view.budget.AddBudgetFragment"
         android:label="Add Budget"
         tools:layout="@layout/fragment_add_budget" >
         <action
@@ -112,7 +112,7 @@
     </fragment>
     <fragment
         android:id="@+id/EditBudgetFragment"
-        android:name="com.cp3405b1.expensetrackerapp.budget.EditBudgetFragment"
+        android:name="com.cp3405b1.expensetrackerapp.view.budget.EditBudgetFragment"
         android:label="Edit Budget"
         tools:layout="@layout/fragment_edit_budget" >
         <action

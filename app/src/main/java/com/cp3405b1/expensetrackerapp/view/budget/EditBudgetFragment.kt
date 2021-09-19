@@ -14,7 +14,6 @@ import androidx.navigation.fragment.navArgs
 import com.cp3405b1.expensetrackerapp.R
 import com.cp3405b1.expensetrackerapp.budget.Budget
 import com.cp3405b1.expensetrackerapp.budget.BudgetViewModel
-import com.cp3405b1.expensetrackerapp.budget.EditBudgetFragmentArgs
 import kotlinx.android.synthetic.main.fragment_edit_budget.*
 import kotlinx.android.synthetic.main.fragment_edit_budget.view.*
 
