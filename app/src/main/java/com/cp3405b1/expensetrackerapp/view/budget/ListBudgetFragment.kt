@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cp3405b1.expensetrackerapp.R
 import com.cp3405b1.expensetrackerapp.budget.BudgetViewModel
@@ -26,9 +27,9 @@ class ListBudgetFragment : Fragment() {
 
         // Recyclerview
         val adapter = ListAdapter()
-        val recyclerView = view.recyclerview
+        val recyclerView = view.list_budget
         recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.layoutManager = GridLayoutManager(context,2)
 
         // BudgetViewModel
         mBudgetViewModel = ViewModelProvider(this).get(BudgetViewModel::class.java)
@@ -45,6 +46,7 @@ class ListBudgetFragment : Fragment() {
 
         return view
     }
+
 
     private fun deleteAllBudgets() {
         val builder = AlertDialog.Builder(requireContext())
