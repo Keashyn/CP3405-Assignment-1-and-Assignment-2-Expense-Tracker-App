@@ -32,7 +32,7 @@ class ListBudgetFragment : Fragment() {
 
         // BudgetViewModel
         mBudgetViewModel = ViewModelProvider(this).get(BudgetViewModel::class.java)
-        mBudgetViewModel.readAllData.observe(viewLifecycleOwner, Observer { budget ->
+        mBudgetViewModel.readAllData.observe(viewLifecycleOwner, { budget ->
             adapter.setData(budget)
         })
 

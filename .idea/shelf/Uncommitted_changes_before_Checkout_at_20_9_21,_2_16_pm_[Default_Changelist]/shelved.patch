@@ -1,0 +1,967 @@
+Index: app/src/main/res/layout/activity_main2.xml
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main2.xml b/app/src/main/res/layout/activity_main2.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/activity_main2.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ /dev/null	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
+@@ -1,32 +0,0 @@
+-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".BudgetActivity">
+-
+-    <com.google.android.material.appbar.AppBarLayout
+-        android:id="@+id/appbar"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:backgroundTint="@color/surface"
+-        app:liftOnScroll="true"
+-        tools:ignore="UnusedAttribute">
+-
+-        <androidx.appcompat.widget.Toolbar
+-            android:id="@+id/toolbar"
+-            android:layout_width="match_parent"
+-            android:layout_height="?actionBarSize" />
+-    </com.google.android.material.appbar.AppBarLayout>
+-
+-    <androidx.fragment.app.FragmentContainerView
+-        android:id="@+id/nav_host_fragment"
+-        android:name="androidx.navigation.fragment.NavHostFragment"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        android:layout_marginTop="?actionBarSize"
+-        app:defaultNavHost="true"
+-        app:navGraph="@navigation/nav_graph1" />
+-
+-
+-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/content_budget_details.xml
+===================================================================
+diff --git a/app/src/main/res/layout/content_budget_details.xml b/app/src/main/res/layout/content_budget_details.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/content_budget_details.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ /dev/null	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
+@@ -1,118 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:layout_marginBottom="@dimen/dimen_32"
+-    android:fillViewport="true">
+-
+-    <androidx.constraintlayout.widget.ConstraintLayout
+-        android:id="@+id/detail_view"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:background="@color/white">
+-
+-
+-        <TextView
+-            android:id="@+id/caption_category"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginStart="@dimen/dimen_16"
+-            android:text="@string/text_select_category"
+-            android:layout_marginTop="@dimen/dimen_32"
+-            android:fontFamily="@font/open_sans_bold"
+-            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toTopOf="parent" />
+-
+-        <TextView
+-            android:id="@+id/select_category"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginStart="@dimen/dimen_16"
+-            android:layout_marginTop="@dimen/dimen_8"
+-            android:textColor="@color/black"
+-            android:fontFamily="@font/open_sans_regular"
+-            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@id/caption_category"
+-            tools:text="Travel" />
+-
+-        <TextView
+-            android:id="@+id/caption_repeat"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginStart="@dimen/dimen_16"
+-            android:layout_marginTop="@dimen/dimen_24"
+-            android:text="@string/text_expense_repeat"
+-            android:fontFamily="@font/open_sans_bold"
+-            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@id/select_category" />
+-
+-        <TextView
+-            android:id="@+id/repeat"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginStart="@dimen/dimen_16"
+-            android:layout_marginTop="@dimen/dimen_8"
+-            android:textColor="@color/black"
+-            android:fontFamily="@font/open_sans_regular"
+-            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@id/caption_repeat"
+-            tools:text="Weekly" />
+-
+-        <TextView
+-            android:id="@+id/caption_amount"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginStart="@dimen/dimen_16"
+-            android:layout_marginTop="92dp"
+-            android:fontFamily="@font/open_sans_bold"
+-            android:text="@string/text_expense_amount"
+-            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@id/select_category" />
+-
+-        <TextView
+-            android:id="@+id/amount"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginStart="20dp"
+-            android:layout_marginTop="16dp"
+-            android:fontFamily="@font/open_sans_regular"
+-            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+-            android:textColor="@color/black"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@id/caption_amount"
+-            tools:text="S$457" />
+-
+-        <com.google.android.material.imageview.ShapeableImageView
+-            android:id="@+id/app_icon_for_share"
+-            app:srcCompat="@drawable/ic_logo"
+-            android:visibility="invisible"
+-            app:layout_constraintEnd_toStartOf="@+id/app_name_for_share"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            android:layout_width="@dimen/dimen_64"
+-            android:layout_height="@dimen/dimen_64" />
+-
+-        <TextView
+-            android:id="@+id/app_name_for_share"
+-            android:padding="@dimen/dimen_16"
+-            android:gravity="center"
+-            android:visibility="invisible"
+-            android:text="@string/app_name"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            android:layout_marginStart="@dimen/dimen_16"
+-            android:fontFamily="@font/open_sans_regular"
+-            app:layout_constraintTop_toTopOf="@id/app_icon_for_share"
+-            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content" />
+-
+-    </androidx.constraintlayout.widget.ConstraintLayout>
+-
+-</ScrollView>
+Index: app/src/main/res/navigation/nav_graph1.xml
+===================================================================
+diff --git a/app/src/main/res/navigation/nav_graph1.xml b/app/src/main/res/navigation/nav_graph1.xml
+deleted file mode 100644
+--- a/app/src/main/res/navigation/nav_graph1.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ /dev/null	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
+@@ -1,89 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/nav_graph1"
+-    app:startDestination="@id/budgetDashboardFragment">
+-
+-    <fragment
+-        android:id="@+id/budgetDashboardFragment"
+-        android:name="com.cp3405b1.expensetrackerapp.view.dashboard.BudgetDashboardFragment"
+-        android:label="fragment_budgetdashboard"
+-        tools:layout="@layout/fragment_budgetdashboard" >
+-        <action
+-            android:id="@+id/action_budgetDashboardFragment_to_addBudgetFragment"
+-            app:destination="@id/addBudgetFragment" />
+-        <action
+-            android:id="@+id/action_budgetDashboardFragment_to_budgetDetailsFragment"
+-            app:destination="@id/budgetDetailsFragment" />
+-        <action
+-            android:id="@+id/action_budgetdashboardFragment_to_aboutFragment"
+-            app:destination="@id/aboutFragment"
+-            app:enterAnim="@anim/slide_in_right"
+-            app:exitAnim="@anim/slide_out_left"
+-            app:popEnterAnim="@anim/slide_in_left"
+-            app:popExitAnim="@anim/slide_out_right" />
+-    </fragment>
+-
+-    <fragment
+-        android:id="@+id/addBudgetFragment"
+-        android:name="com.cp3405b1.expensetrackerapp.view.add.AddBudgetFragment"
+-        android:label="fragment_add_budget"
+-        tools:layout="@layout/fragment_add_budget">
+-        <action
+-            android:id="@+id/action_addBudgetFragment_to_budgetDashboardFragment"
+-            app:destination="@id/budgetDashboardFragment"
+-            app:popUpTo="@id/addBudgetFragment"
+-            app:popUpToInclusive="true" />
+-    </fragment>
+-
+-    <fragment
+-        android:id="@+id/budgetDetailsFragment"
+-        android:name="com.cp3405b1.expensetrackerapp.view.details.BudgetDetailsFragment"
+-        android:label="Budget Details"
+-        tools:layout="@layout/fragment_budget_details" >
+-        <argument
+-            android:name="budget"
+-            app:argType="com.cp3405b1.expensetrackerapp.model.Budget" />
+-        <action
+-            android:id="@+id/action_budgetDetailsFragment_to_editBudgetFragment"
+-            app:destination="@id/editBudgetFragment"
+-            app:enterAnim="@anim/slide_in_right"
+-            app:exitAnim="@anim/slide_out_left"
+-            app:popEnterAnim="@anim/slide_in_left"
+-            app:popExitAnim="@anim/slide_out_right"/>
+-        <action
+-            android:id="@+id/action_budgetDetailsFragment_to_errorDialog"
+-            app:destination="@id/errorDialog" />
+-    </fragment>
+-    <fragment
+-        android:id="@+id/editBudgetFragment"
+-        android:name="com.cp3405b1.expensetrackerapp.view.edit.EditBudgetFragment"
+-        android:label="Edit Budget"
+-        tools:layout="@layout/fragment_edit_budget">
+-    <argument
+-        android:name="budget"
+-        app:argType="com.cp3405b1.expensetrackerapp.model.Budget" />
+-    <action
+-        android:id="@+id/edit_to_details"
+-        app:destination="@id/budgetDetailsFragment" />
+-    </fragment>
+-    <fragment
+-        android:id="@+id/aboutFragment"
+-        android:name="com.cp3405b1.expensetrackerapp.view.about.AboutFragment"
+-        android:label="About"
+-        tools:layout="@layout/fragment_about" />
+-
+-    <dialog
+-        android:id="@+id/errorDialog"
+-        android:name="com.cp3405b1.expensetrackerapp.view.dialog.ErrorDialog"
+-        android:label="ErrorDialog"
+-        tools:layout="@layout/error_dialog_layout">
+-        <argument
+-            android:name="title"
+-            app:argType="string" />
+-        <argument
+-            android:name="message"
+-            app:argType="string" />
+-    </dialog>
+-</navigation>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_budgetdashboard.xml
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_budgetdashboard.xml b/app/src/main/res/layout/fragment_budgetdashboard.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/fragment_budgetdashboard.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ /dev/null	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
+@@ -1,121 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:background="@color/background"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    tools:context=".view.dashboard.BudgetDashboardFragment">
+-
+-
+-    <androidx.core.widget.NestedScrollView
+-        android:id="@+id/main_dashboard_scroll_view"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        android:fillViewport="true"
+-        android:scrollbars="none">
+-
+-
+-        <androidx.constraintlayout.widget.ConstraintLayout
+-            android:id="@+id/dashboard_group"
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content">
+-
+-
+-            <include
+-                android:id="@+id/total_budget_view"
+-                layout="@layout/total_budget_view"
+-                android:layout_width="match_parent"
+-                android:layout_height="124dp"
+-                android:layout_marginStart="@dimen/dimen_8"
+-                android:layout_marginEnd="@dimen/dimen_8"
+-                android:layout_marginTop="@dimen/dimen_8"
+-                app:layout_constraintEnd_toEndOf="parent"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toTopOf="parent" />
+-
+-
+-            <LinearLayout
+-                android:id="@+id/total_income_expense_view"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:baselineAligned="false"
+-                android:gravity="center_horizontal"
+-                android:orientation="horizontal"
+-                app:layout_constraintEnd_toEndOf="parent"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toBottomOf="@id/total_budget_view">
+-
+-                <include
+-                    android:id="@+id/weekly_card_view"
+-                    layout="@layout/content_budget_weekly_monthly_card_layout"
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1" />
+-
+-                <include
+-                    android:id="@+id/monthly_card_view"
+-                    layout="@layout/content_budget_weekly_monthly_card_layout"
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1" />
+-
+-            </LinearLayout>
+-
+-            <TextView
+-                android:id="@+id/title_recent_budget"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:layout_marginStart="@dimen/dimen_16"
+-                android:layout_marginTop="@dimen/dimen_16"
+-                android:fontFamily="@font/open_sans_semibold"
+-                android:text="@string/text_recent_budgets"
+-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toBottomOf="@id/total_income_expense_view" />
+-
+-
+-            <androidx.recyclerview.widget.RecyclerView
+-                android:id="@+id/budget_rv"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginTop="12dp"
+-                android:visibility="visible"
+-                app:layout_constraintEnd_toEndOf="parent"
+-                app:layout_constraintHorizontal_bias="0.0"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toBottomOf="@id/title_recent_budget"
+-                tools:listitem="@layout/item_budget_layout" />
+-
+-
+-        </androidx.constraintlayout.widget.ConstraintLayout>
+-
+-    </androidx.core.widget.NestedScrollView>
+-
+-    <ViewStub
+-        android:id="@+id/emptyStateLayout"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_gravity="center"
+-        android:layout="@layout/content_empty_state_layout"
+-        android:visibility="gone"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+-        android:id="@+id/btn_add_budget"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_gravity="bottom|end"
+-        android:layout_margin="@dimen/dimen_32"
+-        android:backgroundTint="@color/blue_500"
+-        android:contentDescription="@string/app_name"
+-        android:src="@drawable/ic_baseline_add"
+-        app:borderWidth="0dp"
+-        app:tint="@color/white"
+-        tools:ignore="UnusedAttribute" />
+-
+-
+-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+Index: app/src/main/res/layout/total_budget_view.xml
+===================================================================
+diff --git a/app/src/main/res/layout/total_budget_view.xml b/app/src/main/res/layout/total_budget_view.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/total_budget_view.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ /dev/null	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
+@@ -1,39 +0,0 @@
+-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/total_balance_view"
+-    android:layout_width="match_parent"
+-    android:layout_height="124dp"
+-    android:layout_margin="@dimen/dimen_8"
+-    app:cardBackgroundColor="@color/surface"
+-    app:cardElevation="@dimen/dimen_0">
+-
+-    <LinearLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_gravity="center_horizontal|center_vertical"
+-        android:orientation="vertical">
+-
+-        <TextView
+-            android:id="@+id/total_budget_title"
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:fontFamily="@font/open_sans_semibold"
+-            android:gravity="center_horizontal"
+-            android:text="@string/text_total_budget"
+-            android:textAppearance="@style/TextAppearance.MaterialComponents.Overline" />
+-
+-        <TextView
+-            android:id="@+id/total_budget"
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:layout_marginTop="@dimen/dimen_12"
+-            android:fontFamily="@font/open_sans_semibold"
+-            android:gravity="center_horizontal"
+-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+-            android:textStyle="bold"
+-            tools:text="S$23,103" />
+-
+-    </LinearLayout>
+-
+-</androidx.cardview.widget.CardView>
+\ No newline at end of file
+Index: app/src/main/res/layout/content_budget_weekly_monthly_card_layout.xml
+===================================================================
+diff --git a/app/src/main/res/layout/content_budget_weekly_monthly_card_layout.xml b/app/src/main/res/layout/content_budget_weekly_monthly_card_layout.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/content_budget_weekly_monthly_card_layout.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ /dev/null	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
+@@ -1,59 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent">
+-
+-    <androidx.cardview.widget.CardView
+-        android:id="@+id/total_card_view"
+-        android:layout_width="match_parent"
+-        android:layout_height="124dp"
+-        android:layout_margin="@dimen/dimen_8"
+-        app:cardBackgroundColor="@color/surface"
+-        app:cardElevation="@dimen/dimen_0"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent">
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="match_parent"
+-            android:layout_gravity="center_horizontal|center_vertical"
+-            android:orientation="vertical">
+-
+-            <ImageView
+-                android:id="@+id/total_icon"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:layout_gravity="end"
+-                android:layout_margin="@dimen/dimen_12"
+-                android:contentDescription="@string/app_name"
+-                android:src="@drawable/outline_calendar_today" />
+-
+-            <TextView
+-                android:id="@+id/total_budget"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:layout_marginStart="@dimen/dimen_12"
+-                android:fontFamily="@font/open_sans_semibold"
+-                android:gravity="center_horizontal"
+-                android:text="@string/text_weekly_budget"
+-                android:textAppearance="@style/TextAppearance.MaterialComponents.Overline" />
+-
+-            <TextView
+-                android:id="@+id/total"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginStart="@dimen/dimen_12"
+-                android:layout_marginTop="@dimen/dimen_12"
+-                android:fontFamily="@font/open_sans_semibold"
+-                android:gravity="start"
+-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+-                android:textStyle="bold"
+-                tools:text="$23,103" />
+-
+-        </LinearLayout>
+-
+-    </androidx.cardview.widget.CardView>
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/content_add_budget_layout.xml
+===================================================================
+diff --git a/app/src/main/res/layout/content_add_budget_layout.xml b/app/src/main/res/layout/content_add_budget_layout.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/content_add_budget_layout.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ /dev/null	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
+@@ -1,69 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    android:layout_width="match_parent"
+-    android:layout_height="wrap_content"
+-    android:layout_gravity="center_horizontal|center_vertical"
+-    android:orientation="vertical">
+-
+-
+-    <com.google.android.material.textfield.TextInputLayout
+-        android:id="@+id/et_select_category_view"
+-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_margin="@dimen/dimen_16"
+-        android:hint="@string/text_select_category"
+-        app:boxBackgroundColor="@color/background">
+-
+-
+-        <AutoCompleteTextView
+-            android:id="@+id/et_select_category"
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:fontFamily="@font/open_sans_regular"
+-            android:inputType="none"
+-            android:labelFor="@id/et_select_category" />
+-
+-    </com.google.android.material.textfield.TextInputLayout>
+-
+-    <com.google.android.material.textfield.TextInputLayout
+-        android:id="@+id/et_repeat_view"
+-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_margin="@dimen/dimen_16"
+-        android:hint="@string/text_expense_repeat"
+-        app:boxBackgroundColor="@color/background">
+-
+-        <AutoCompleteTextView
+-            android:id="@+id/et_repeat"
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:fontFamily="@font/open_sans_regular"
+-            android:inputType="none"
+-            android:labelFor="@id/et_repeat" />
+-
+-    </com.google.android.material.textfield.TextInputLayout>
+-
+-    <com.google.android.material.textfield.TextInputLayout
+-        android:id="@+id/et_amount_view"
+-        style="@style/PrimaryEditText"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_margin="@dimen/dimen_16"
+-        android:hint="@string/text_expense_amount"
+-        app:prefixText="@string/text_expense_singapore_dollar">
+-
+-        <com.google.android.material.textfield.TextInputEditText
+-            android:id="@+id/et_amount"
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:fontFamily="@font/open_sans_regular"
+-            android:inputType="numberDecimal" />
+-
+-
+-    </com.google.android.material.textfield.TextInputLayout>
+-
+-
+-</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_budget_details.xml
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_budget_details.xml b/app/src/main/res/layout/fragment_budget_details.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/fragment_budget_details.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ /dev/null	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
+@@ -1,35 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".view.details.BudgetDetailsFragment">
+-
+-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent">
+-
+-        <include
+-            android:id="@+id/transactionDetails"
+-            layout="@layout/content_budget_details"/>
+-
+-
+-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+-            android:id="@+id/edit_transaction"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_gravity="bottom|end"
+-            android:layout_margin="@dimen/dimen_24"
+-            android:contentDescription="@string/app_name"
+-            android:text="@string/text_edit"
+-            android:textColor="@color/white"
+-            app:backgroundTint="@color/blue_500"
+-            app:borderWidth="0dp"
+-            app:icon="@drawable/ic_edit"
+-            app:iconTint="@color/white" />
+-
+-
+-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+-
+-</FrameLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.cp3405b1.expensetrackerapp.view.budget\n\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport androidx.navigation.findNavController\nimport androidx.recyclerview.widget.RecyclerView\nimport com.cp3405b1.expensetrackerapp.R\nimport com.cp3405b1.expensetrackerapp.budget.Budget\nimport kotlinx.android.synthetic.main.custom_row.view.*\n\nclass ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {\n\n    private var budgetList = emptyList<Budget>()\n\n    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {}\n\n    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {\n        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false))\n    }\n\n    override fun getItemCount(): Int {\n       return budgetList.size\n    }\n\n    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {\n        val currentItem = budgetList[position]\n        holder.itemView.id_txt.text = currentItem.id.toString()\n        holder.itemView.category_txt.text = currentItem.category\n        holder.itemView.repeat_txt.text = currentItem.repeat\n        holder.itemView.amount_txt.text = currentItem.amount.toString()\n\n    }\n\n    fun setData(budget: List<Budget>){\n        this.budgetList = budget\n        notifyDataSetChanged()\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListAdapter.kt b/app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListAdapter.kt
+--- a/app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListAdapter.kt	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListAdapter.kt	(date 1631864169495)
+@@ -13,7 +13,7 @@
+ 
+     private var budgetList = emptyList<Budget>()
+ 
+-    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {}
++    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
+ 
+     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+         return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false))
+Index: app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListBudgetFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.cp3405b1.expensetrackerapp.view.budget\n\nimport android.app.AlertDialog\nimport android.os.Bundle\nimport android.view.*\nimport android.widget.Toast\nimport androidx.fragment.app.Fragment\nimport androidx.lifecycle.Observer\nimport androidx.lifecycle.ViewModelProvider\nimport androidx.navigation.fragment.findNavController\nimport androidx.recyclerview.widget.LinearLayoutManager\nimport com.cp3405b1.expensetrackerapp.R\nimport com.cp3405b1.expensetrackerapp.budget.BudgetViewModel\nimport kotlinx.android.synthetic.main.fragment_view_budget.view.*\n\nclass ListBudgetFragment : Fragment() {\n\n    private lateinit var mBudgetViewModel: BudgetViewModel\n\n    override fun onCreateView(\n        inflater: LayoutInflater, container: ViewGroup?,\n        savedInstanceState: Bundle?\n    ): View? {\n        // Inflate the layout for this fragment\n        val view = inflater.inflate(R.layout.fragment_view_budget, container, false)\n\n        // Recyclerview\n        val adapter = ListAdapter()\n        val recyclerView = view.recyclerview\n        recyclerView.adapter = adapter\n        recyclerView.layoutManager = LinearLayoutManager(requireContext())\n\n        // BudgetViewModel\n        mBudgetViewModel = ViewModelProvider(this).get(BudgetViewModel::class.java)\n        mBudgetViewModel.readAllData.observe(viewLifecycleOwner, Observer { budget ->\n            adapter.setData(budget)\n        })\n\n        view.floatingActionButton.setOnClickListener {\n            findNavController().navigate(R.id.action_ViewBudgetFragment_to_AddBudgetFragment)\n        }\n\n        // Add menu\n        setHasOptionsMenu(true)\n\n        return view\n    }\n\n    private fun deleteAllBudgets() {\n        val builder = AlertDialog.Builder(requireContext())\n        builder.setPositiveButton(\"Yes\") { _, _ ->\n            mBudgetViewModel.deleteAllBudgets()\n            Toast.makeText(\n                requireContext(),\n                \"Successfully removed everything\",\n                Toast.LENGTH_SHORT).show()\n        }\n        builder.setNegativeButton(\"No\") { _, _ -> }\n        builder.setTitle(\"Delete everything?\")\n        builder.setMessage(\"Are you sure you want to delete everything?\")\n        builder.create().show()\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListBudgetFragment.kt b/app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListBudgetFragment.kt
+--- a/app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListBudgetFragment.kt	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/main/java/com/cp3405b1/expensetrackerapp/view/budget/ListBudgetFragment.kt	(date 1631864169445)
+@@ -32,7 +32,7 @@
+ 
+         // BudgetViewModel
+         mBudgetViewModel = ViewModelProvider(this).get(BudgetViewModel::class.java)
+-        mBudgetViewModel.readAllData.observe(viewLifecycleOwner, Observer { budget ->
++        mBudgetViewModel.readAllData.observe(viewLifecycleOwner, { budget ->
+             adapter.setData(budget)
+         })
+ 
+Index: .idea/navEditor.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"navEditor-manualLayoutAlgorithm2\">\n    <option name=\"myPositions\">\n      <map>\n        <entry key=\"nav_graph.xml\">\n          <value>\n            <LayoutPositions>\n              <option name=\"myPositions\">\n                <map>\n                  <entry key=\"AddBudgetFragment\">\n                    <value>\n                      <LayoutPositions>\n                        <option name=\"myPosition\">\n                          <Point>\n                            <option name=\"x\" value=\"-570\" />\n                            <option name=\"y\" value=\"118\" />\n                          </Point>\n                        </option>\n                        <option name=\"myPositions\">\n                          <map>\n                            <entry key=\"action_AddBudgetFragment_to_ViewBudgetFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                          </map>\n                        </option>\n                      </LayoutPositions>\n                    </value>\n                  </entry>\n                  <entry key=\"EditBudgetFragment\">\n                    <value>\n                      <LayoutPositions>\n                        <option name=\"myPosition\">\n                          <Point>\n                            <option name=\"x\" value=\"-170\" />\n                            <option name=\"y\" value=\"141\" />\n                          </Point>\n                        </option>\n                        <option name=\"myPositions\">\n                          <map>\n                            <entry key=\"action_EditBudgetFragment_to_ViewBudgetFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                          </map>\n                        </option>\n                      </LayoutPositions>\n                    </value>\n                  </entry>\n                  <entry key=\"ViewBudgetFragment\">\n                    <value>\n                      <LayoutPositions>\n                        <option name=\"myPosition\">\n                          <Point>\n                            <option name=\"x\" value=\"-332\" />\n                            <option name=\"y\" value=\"665\" />\n                          </Point>\n                        </option>\n                        <option name=\"myPositions\">\n                          <map>\n                            <entry key=\"action_ViewBudgetFragment_to_AddBudgetFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                            <entry key=\"action_ViewBudgetFragment_to_EditBudgetFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                          </map>\n                        </option>\n                      </LayoutPositions>\n                    </value>\n                  </entry>\n                  <entry key=\"aboutFragment\">\n                    <value>\n                      <LayoutPositions>\n                        <option name=\"myPosition\">\n                          <Point>\n                            <option name=\"x\" value=\"256\" />\n                            <option name=\"y\" value=\"745\" />\n                          </Point>\n                        </option>\n                      </LayoutPositions>\n                    </value>\n                  </entry>\n                  <entry key=\"addTransactionFragment\">\n                    <value>\n                      <LayoutPositions>\n                        <option name=\"myPosition\">\n                          <Point>\n                            <option name=\"x\" value=\"256\" />\n                            <option name=\"y\" value=\"389\" />\n                          </Point>\n                        </option>\n                        <option name=\"myPositions\">\n                          <map>\n                            <entry key=\"action_addTransactionFragment_to_dashboardFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                          </map>\n                        </option>\n                      </LayoutPositions>\n                    </value>\n                  </entry>\n                  <entry key=\"dashboardFragment\">\n                    <value>\n                      <LayoutPositions>\n                        <option name=\"myPosition\">\n                          <Point>\n                            <option name=\"x\" value=\"12\" />\n                            <option name=\"y\" value=\"1016\" />\n                          </Point>\n                        </option>\n                        <option name=\"myPositions\">\n                          <map>\n                            <entry key=\"action_dashboardFragment_to_ViewBudgetFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                            <entry key=\"action_dashboardFragment_to_aboutFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                            <entry key=\"action_dashboardFragment_to_addTransactionFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                            <entry key=\"action_dashboardFragment_to_transactionDetailsFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                          </map>\n                        </option>\n                      </LayoutPositions>\n                    </value>\n                  </entry>\n                  <entry key=\"editTransactionFragment\">\n                    <value>\n                      <LayoutPositions>\n                        <option name=\"myPosition\">\n                          <Point>\n                            <option name=\"x\" value=\"500\" />\n                            <option name=\"y\" value=\"809\" />\n                          </Point>\n                        </option>\n                        <option name=\"myPositions\">\n                          <map>\n                            <entry key=\"edit_to_details\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                          </map>\n                        </option>\n                      </LayoutPositions>\n                    </value>\n                  </entry>\n                  <entry key=\"errorDialog\">\n                    <value>\n                      <LayoutPositions>\n                        <option name=\"myPosition\">\n                          <Point>\n                            <option name=\"x\" value=\"500\" />\n                            <option name=\"y\" value=\"1165\" />\n                          </Point>\n                        </option>\n                      </LayoutPositions>\n                    </value>\n                  </entry>\n                  <entry key=\"transactionDetailsFragment\">\n                    <value>\n                      <LayoutPositions>\n                        <option name=\"myPosition\">\n                          <Point>\n                            <option name=\"x\" value=\"256\" />\n                            <option name=\"y\" value=\"1101\" />\n                          </Point>\n                        </option>\n                        <option name=\"myPositions\">\n                          <map>\n                            <entry key=\"action_transactionDetailsFragment_to_editTransactionFragment\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                            <entry key=\"action_transactionDetailsFragment_to_errorDialog\">\n                              <value>\n                                <LayoutPositions />\n                              </value>\n                            </entry>\n                          </map>\n                        </option>\n                      </LayoutPositions>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </LayoutPositions>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/navEditor.xml b/.idea/navEditor.xml
+--- a/.idea/navEditor.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/.idea/navEditor.xml	(date 1632118569474)
+@@ -209,6 +209,139 @@
+             </LayoutPositions>
+           </value>
+         </entry>
++        <entry key="nav_graph1.xml">
++          <value>
++            <LayoutPositions>
++              <option name="myPositions">
++                <map>
++                  <entry key="aboutFragment">
++                    <value>
++                      <LayoutPositions>
++                        <option name="myPosition">
++                          <Point>
++                            <option name="x" value="256" />
++                            <option name="y" value="745" />
++                          </Point>
++                        </option>
++                      </LayoutPositions>
++                    </value>
++                  </entry>
++                  <entry key="addBudgetFragment">
++                    <value>
++                      <LayoutPositions>
++                        <option name="myPosition">
++                          <Point>
++                            <option name="x" value="256" />
++                            <option name="y" value="389" />
++                          </Point>
++                        </option>
++                        <option name="myPositions">
++                          <map>
++                            <entry key="action_addBudgetFragment_to_budgetDashboardFragment">
++                              <value>
++                                <LayoutPositions />
++                              </value>
++                            </entry>
++                          </map>
++                        </option>
++                      </LayoutPositions>
++                    </value>
++                  </entry>
++                  <entry key="budgetDashboardFragment">
++                    <value>
++                      <LayoutPositions>
++                        <option name="myPosition">
++                          <Point>
++                            <option name="x" value="12" />
++                            <option name="y" value="110" />
++                          </Point>
++                        </option>
++                        <option name="myPositions">
++                          <map>
++                            <entry key="action_budgetDashboardFragment_to_addBudgetFragment">
++                              <value>
++                                <LayoutPositions />
++                              </value>
++                            </entry>
++                            <entry key="action_budgetDashboardFragment_to_budgetDetailsFragment">
++                              <value>
++                                <LayoutPositions />
++                              </value>
++                            </entry>
++                            <entry key="action_budgetdashboardFragment_to_aboutFragment">
++                              <value>
++                                <LayoutPositions />
++                              </value>
++                            </entry>
++                          </map>
++                        </option>
++                      </LayoutPositions>
++                    </value>
++                  </entry>
++                  <entry key="budgetDetailsFragment">
++                    <value>
++                      <LayoutPositions>
++                        <option name="myPosition">
++                          <Point>
++                            <option name="x" value="256" />
++                            <option name="y" value="33" />
++                          </Point>
++                        </option>
++                        <option name="myPositions">
++                          <map>
++                            <entry key="action_budgetDetailsFragment_to_editBudgetFragment">
++                              <value>
++                                <LayoutPositions />
++                              </value>
++                            </entry>
++                            <entry key="action_budgetDetailsFragment_to_errorDialog">
++                              <value>
++                                <LayoutPositions />
++                              </value>
++                            </entry>
++                          </map>
++                        </option>
++                      </LayoutPositions>
++                    </value>
++                  </entry>
++                  <entry key="editBudgetFragment">
++                    <value>
++                      <LayoutPositions>
++                        <option name="myPosition">
++                          <Point>
++                            <option name="x" value="500" />
++                            <option name="y" value="12" />
++                          </Point>
++                        </option>
++                        <option name="myPositions">
++                          <map>
++                            <entry key="edit_to_details">
++                              <value>
++                                <LayoutPositions />
++                              </value>
++                            </entry>
++                          </map>
++                        </option>
++                      </LayoutPositions>
++                    </value>
++                  </entry>
++                  <entry key="errorDialog">
++                    <value>
++                      <LayoutPositions>
++                        <option name="myPosition">
++                          <Point>
++                            <option name="x" value="500" />
++                            <option name="y" value="368" />
++                          </Point>
++                        </option>
++                      </LayoutPositions>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </LayoutPositions>
++          </value>
++        </entry>
+       </map>
+     </option>
+   </component>
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.cp3405b1.expensetrackerapp\">\n\n    <meta-data\n        android:name=\"preloaded_fonts\"\n        android:resource=\"@array/preloaded_fonts\" />\n\n    <application\n        android:name=\".app.ExpenseTrackerApp\"\n        android:allowBackup=\"true\"\n        android:icon=\"@drawable/ic_logo\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@drawable/ic_logo\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/Theme.ExpenseTrackerApp\">\n        <activity\n            android:name=\".MainActivity2\"\n            android:exported=\"true\" />\n        <activity\n            android:name=\".MainActivity\"\n            android:exported=\"true\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/main/AndroidManifest.xml	(date 1631864169473)
+@@ -15,9 +15,6 @@
+         android:supportsRtl="true"
+         android:theme="@style/Theme.ExpenseTrackerApp">
+         <activity
+-            android:name=".MainActivity2"
+-            android:exported="true" />
+-        <activity
+             android:name=".MainActivity"
+             android:exported="true">
+             <intent-filter>
+Index: app/src/main/res/font/open_sans_regular.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<font-family xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    app:fontProviderAuthority=\"com.google.android.gms.fonts\"\n    app:fontProviderCerts=\"@array/com_google_android_gms_fonts_certs\"\n    app:fontProviderPackage=\"com.google.android.gms\"\n    app:fontProviderQuery=\"Open Sans\"></font-family>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/font/open_sans_regular.xml b/app/src/main/res/font/open_sans_regular.xml
+--- a/app/src/main/res/font/open_sans_regular.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/main/res/font/open_sans_regular.xml	(date 1631864169424)
+@@ -3,4 +3,4 @@
+     app:fontProviderAuthority="com.google.android.gms.fonts"
+     app:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
+     app:fontProviderPackage="com.google.android.gms"
+-    app:fontProviderQuery="Open Sans"></font-family>
++    app:fontProviderQuery="Open Sans" />
+Index: app/src/test/java/com/cp3405b1/expensetrackerapp/ExampleUnitTest.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.cp3405b1.expensetrackerapp;\n\nimport org.junit.Test\n\nimport org.junit.Assert.*\n\n/**\n * Example local unit test, which will execute on the development machine (host).\n *\n * @see <a href=\"http://d.android.com/tools/testing\"> Testing documentation</a>\n */\nclass ExampleUnitTest {\n    @Test\n    fun  addition_isCorrect() {\n        assertEquals(4, 2 + 2);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/test/java/com/cp3405b1/expensetrackerapp/ExampleUnitTest.kt b/app/src/test/java/com/cp3405b1/expensetrackerapp/ExampleUnitTest.kt
+--- a/app/src/test/java/com/cp3405b1/expensetrackerapp/ExampleUnitTest.kt	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/test/java/com/cp3405b1/expensetrackerapp/ExampleUnitTest.kt	(date 1631864169453)
+@@ -1,4 +1,4 @@
+-package com.cp3405b1.expensetrackerapp;
++package com.cp3405b1.expensetrackerapp
+ 
+ import org.junit.Test
+ 
+@@ -12,6 +12,6 @@
+ class ExampleUnitTest {
+     @Test
+     fun  addition_isCorrect() {
+-        assertEquals(4, 2 + 2);
++        assertEquals(4, 2 + 2)
+     }
+ }
+Index: app/src/main/res/layout/custom_row.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"wrap_content\"\n    android:padding=\"24sp\"\n    android:id=\"@+id/rowLayout\">\n\n    <TextView\n        android:id=\"@+id/id_txt\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"1\"\n        android:textSize=\"40sp\"\n        android:textStyle=\"bold\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <TextView\n        android:id=\"@+id/category_txt\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginStart=\"80dp\"\n        android:text=\"Food\"\n        android:textSize=\"24sp\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintStart_toEndOf=\"@+id/id_txt\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <TextView\n        android:id=\"@+id/repeat_txt\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginStart=\"6dp\"\n        android:text=\"Yes\"\n        android:textSize=\"24sp\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintStart_toEndOf=\"@+id/category_txt\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <TextView\n        android:id=\"@+id/amount_txt\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginStart=\"12dp\"\n        android:text=\"500\"\n        android:textSize=\"24sp\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintStart_toEndOf=\"@+id/repeat_txt\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/custom_row.xml b/app/src/main/res/layout/custom_row.xml
+--- a/app/src/main/res/layout/custom_row.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/main/res/layout/custom_row.xml	(date 1631864169467)
+@@ -1,7 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:padding="24sp"
+Index: app/src/main/res/menu/menu_ui.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><menu xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\">\n\n    <item\n        android:id=\"@+id/spinner\"\n        android:iconTint=\"@color/black\"\n        android:title=\"@string/text_filter\"\n        app:actionViewClass=\"androidx.appcompat.widget.AppCompatSpinner\"\n        app:showAsAction=\"always\" />\n\n    <item\n        android:id=\"@+id/action_view_budget_fragment\"\n        android:icon=\"@drawable/ic_budget\"\n        android:title=\"@string/text_view_budget\"\n        app:showAsAction=\"always\" />\n\n    <item\n        android:id=\"@+id/action_about\"\n        android:enabled=\"true\"\n        android:title=\"@string/text_about\"\n        app:showAsAction=\"never\" />\n\n</menu>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/menu/menu_ui.xml b/app/src/main/res/menu/menu_ui.xml
+--- a/app/src/main/res/menu/menu_ui.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/main/res/menu/menu_ui.xml	(date 1631864169431)
+@@ -6,13 +6,13 @@
+         android:iconTint="@color/black"
+         android:title="@string/text_filter"
+         app:actionViewClass="androidx.appcompat.widget.AppCompatSpinner"
+-        app:showAsAction="always" />
++        app:showAsAction="ifRoom" />
+ 
+     <item
+         android:id="@+id/action_view_budget_fragment"
+         android:icon="@drawable/ic_budget"
+         android:title="@string/text_view_budget"
+-        app:showAsAction="always" />
++        app:showAsAction="ifRoom" />
+ 
+     <item
+         android:id="@+id/action_about"
+Index: app/src/main/java/com/cp3405b1/expensetrackerapp/app/ExpenseTrackerApp.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.cp3405b1.expensetrackerapp.app\n\nimport android.app.Application\nimport dagger.hilt.android.HiltAndroidApp\n\n@HiltAndroidApp\nclass ExpenseTrackerApp : Application(){\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/cp3405b1/expensetrackerapp/app/ExpenseTrackerApp.kt b/app/src/main/java/com/cp3405b1/expensetrackerapp/app/ExpenseTrackerApp.kt
+--- a/app/src/main/java/com/cp3405b1/expensetrackerapp/app/ExpenseTrackerApp.kt	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/main/java/com/cp3405b1/expensetrackerapp/app/ExpenseTrackerApp.kt	(date 1631864169483)
+@@ -4,5 +4,4 @@
+ import dagger.hilt.android.HiltAndroidApp
+ 
+ @HiltAndroidApp
+-class ExpenseTrackerApp : Application(){
+-}
+\ No newline at end of file
++class ExpenseTrackerApp : Application()
+\ No newline at end of file
+Index: app/src/main/res/font/open_sans_semibold.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<font-family xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    app:fontProviderAuthority=\"com.google.android.gms.fonts\"\n    app:fontProviderCerts=\"@array/com_google_android_gms_fonts_certs\"\n    app:fontProviderPackage=\"com.google.android.gms\"\n    app:fontProviderQuery=\"name=Open Sans&amp;weight=600\"></font-family>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/font/open_sans_semibold.xml b/app/src/main/res/font/open_sans_semibold.xml
+--- a/app/src/main/res/font/open_sans_semibold.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/main/res/font/open_sans_semibold.xml	(date 1631864169460)
+@@ -3,4 +3,4 @@
+     app:fontProviderAuthority="com.google.android.gms.fonts"
+     app:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
+     app:fontProviderPackage="com.google.android.gms"
+-    app:fontProviderQuery="name=Open Sans&amp;weight=600"></font-family>
++    app:fontProviderQuery="name=Open Sans&amp;weight=600" />
+Index: app/src/main/res/font/open_sans_bold.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<font-family xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    app:fontProviderAuthority=\"com.google.android.gms.fonts\"\n    app:fontProviderCerts=\"@array/com_google_android_gms_fonts_certs\"\n    app:fontProviderPackage=\"com.google.android.gms\"\n    app:fontProviderQuery=\"name=Open Sans&amp;weight=700\"></font-family>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/font/open_sans_bold.xml b/app/src/main/res/font/open_sans_bold.xml
+--- a/app/src/main/res/font/open_sans_bold.xml	(revision 3a65a8ad1363e3a88ad21955bf23784ac268dbf0)
++++ b/app/src/main/res/font/open_sans_bold.xml	(date 1631864169416)
+@@ -3,4 +3,4 @@
+     app:fontProviderAuthority="com.google.android.gms.fonts"
+     app:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
+     app:fontProviderPackage="com.google.android.gms"
+-    app:fontProviderQuery="name=Open Sans&amp;weight=700"></font-family>
++    app:fontProviderQuery="name=Open Sans&amp;weight=700" />
