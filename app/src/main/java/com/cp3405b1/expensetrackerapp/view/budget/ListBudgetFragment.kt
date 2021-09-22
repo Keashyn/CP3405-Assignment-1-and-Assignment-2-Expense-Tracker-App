@@ -12,7 +12,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cp3405b1.expensetrackerapp.R
 import com.cp3405b1.expensetrackerapp.budget.BudgetViewModel
+import com.cp3405b1.expensetrackerapp.databinding.FragmentViewBudgetBinding
+import com.cp3405b1.expensetrackerapp.model.Transaction
+import com.cp3405b1.expensetrackerapp.utils.SingaporeDollar
 import kotlinx.android.synthetic.main.fragment_view_budget.view.*
+import com.cp3405b1.expensetrackerapp.view.dashboard.DashboardFragment
+import kotlinx.android.synthetic.main.fragment_view_budget.*
 
 class ListBudgetFragment : Fragment() {
 
@@ -45,21 +50,6 @@ class ListBudgetFragment : Fragment() {
         setHasOptionsMenu(true)
 
         return view
-    }
 
-
-    private fun deleteAllBudgets() {
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes") { _, _ ->
-            mBudgetViewModel.deleteAllBudgets()
-            Toast.makeText(
-                requireContext(),
-                "Successfully removed everything",
-                Toast.LENGTH_SHORT).show()
-        }
-        builder.setNegativeButton("No") { _, _ -> }
-        builder.setTitle("Delete everything?")
-        builder.setMessage("Are you sure you want to delete everything?")
-        builder.create().show()
     }
 }
