@@ -42,7 +42,7 @@ This is Group B1 [Scrum Report](https://docs.google.com/document/d/1ljeTd45wb6Sv
 
 You would first need to download android studio with this link: https://developer.android.com/studio?gclid=CjwKCAjwy7CKBhBMEiwA0Eb7atJ6tre3ZYgZRXF42p2Be1jvKdYEpmaXDTeNtNX57GDOD8oLAwNIsxoCcnwQAvD_BwE&gclsrc=aw.ds
 
-You need to clone or download the source code from the branch named Clement's_branch. After cloning the source code, open it in android studio and click trust the project. You will also have to download a virtual device using the AVD manager in android studio to run the app. I used the pixel 3XL API 30. This branch has all the screens linked together, there is no read me file in this branch because its not the main project and also the app works.
+You need to clone or download the source code from the branch named Clement's_branch. After cloning the source code, open it in android studio and click trust the project. You will also have to download a virtual device using the AVD manager in android studio to run the app. I used the pixel 3XL API 30. This branch has all the screens linked together and also the app works.
 
 Igore the other three branches those are separate for transaction and budget screens.
 
