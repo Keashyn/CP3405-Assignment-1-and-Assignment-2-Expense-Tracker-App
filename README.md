@@ -44,12 +44,6 @@ A simple Expense Tracker App 📱 built to help users with their financial needs
 
 <br />
 
-## Demo of Expen$o App
-
-https://user-images.githubusercontent.com/68360382/134453201-d8afe10b-5cff-4d1e-8f46-06eb3cc072e9.mov
-
-<br />
-
 ## Built With 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
 - [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - For asynchronous and more..
