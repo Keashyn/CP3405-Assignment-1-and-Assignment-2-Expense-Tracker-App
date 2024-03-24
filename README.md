@@ -1,27 +1,5 @@
 # CP3405  Assignment 1 and Assignment 2
 
-I use miro board to do and store [scrum artifacts](https://miro.com/app/board/o9J_lA2-Lck=/) such as:
-
-Two Product backlog
-
-Burndown chart
-
-Velocity chart
-
-Daily Stand up
-
-Team retrospective 
-
-Committed hours and focus factor, velocity 
-
-<br />
-
-## Scrum Report And Presenation on Scrum
-
-This is Group B1 [Scrum Report](https://docs.google.com/document/d/1ljeTd45wb6Sv6PPzmzh9rSooItRPeFx67xR4QZ6773U/edit?usp=sharing) and [Presenation](https://docs.google.com/presentation/d/1pk9e4DdihuqVPYs9wDCbNOHoHGVAg1e8/edit?usp=sharing&ouid=106273584563257056793&rtpof=true&sd=true)
-
-<br />
-
 ## To run the app
 
 You would first need to download android studio with this link: https://developer.android.com/studio?gclid=CjwKCAjwy7CKBhBMEiwA0Eb7atJ6tre3ZYgZRXF42p2Be1jvKdYEpmaXDTeNtNX57GDOD8oLAwNIsxoCcnwQAvD_BwE&gclsrc=aw.ds
@@ -30,11 +8,9 @@ You need to clone or download the source code from the branch named Clement's_br
 
 Igore the other three branches those are separate for transaction and budget screens.
 
-If you face any issues running the project please contact me on Discord @Senko#1882
-
 # Expen$o 📊
 
-A simple Expense Tracker App 📱 built to help users with their financial needs. *Made by [CP3405 Group B1](https://github.com/id8lab/scrum-project-assignment-1-and-assignment-2-group_b1-sp52)*
+A simple Expense Tracker App 📱 built to help users with their financial needs. *Made by Keashyn Naidoo*
 
 <br />
 
