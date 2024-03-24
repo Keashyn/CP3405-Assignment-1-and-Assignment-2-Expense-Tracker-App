@@ -1,22 +1,6 @@
-# CP3405 Group B1 Assignment 1 and Assignment 2
+# CP3405  Assignment 1 and Assignment 2
 
-Group B1 Memembers who built this scrum project are:
-
-Keashyn Naidoo (Product Owner)
-
-Clement Han Liang Seah (Scrum Master)
-
-Igor Kenzin (Developer)
-
-Gaukhar Tassemenova  (Developer)
-
-Sillin Wang  (Developer)
-
-Thanh Hai Nguyen  (Developer)
-
-Jiale Xing  (Developer)
-
-We use miro board to do and store [scrum artifacts](https://miro.com/app/board/o9J_lA2-Lck=/) such as:
+I use miro board to do and store [scrum artifacts](https://miro.com/app/board/o9J_lA2-Lck=/) such as:
 
 Two Product backlog
 
@@ -161,18 +145,6 @@ Have an project? DM us at 👇
 
 Keashyn Naidoo - keashyn.naidoo@my.jcu.edu.au
 
-Clement Han Liang Seah - clementhanliang.seah@my.jcu.edu.au
-
-Igor Kenzin - igorkenzin.kenzin@my.jcu.edu.au
-
-Gaukhar Tassemenova -gaukhar.tassemenova@my.jcu.edu.au
-
-Sillin Wang - sillin.wang@my.jcu.edu.au
-
-Thanh Hai Nguyen - thanhai.nguyen@my.jcu.edu.au
-
-Jiale Xing - jiale.xing@my.jcu.edu.au
-
 <br>
 
 ## License 🔖
@@ -180,7 +152,7 @@ Jiale Xing - jiale.xing@my.jcu.edu.au
     Apache 2.0 License
 
 
-    Copyright 2021 CP3405 Group B1 
+    Copyright 2021 CP3405  
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
